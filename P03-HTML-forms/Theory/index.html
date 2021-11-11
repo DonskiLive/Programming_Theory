@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Forms</title>
+</head>
+
+<body>
+    <div align="center">
+        <h1>Form/input etc</h1>
+        <h3>simple input</h3>
+        <input type="text" placeholder="type your name">
+        <br>
+        <hr>
+        <h3>simple form</h3>
+        <form action="#" method="get">
+            Name: <br> <input type="text" name="name" placeholder="Enter your name" size="48" required>
+            <br><br>
+            Age: <br> <input type="number" name="age" min="1" max="100" step="1" value="10" size="48">
+            <br><br>
+            Gender: <br>
+            <input type="radio" name="gender" value="female"> female
+            <input type="radio" name="gender" value="male"> male
+            <br><br>
+            <input type="submit" value="submit">
+            <br><br>
+            Value:
+            <input type="range" name="myRange" max="300" min="0" step="10" value="0">
+            <output for="myRange">300</output>
+            <br><br>
+            E-mail: <br>
+            <input type="email" name="email" placeholder="enter your email, please"> <br>
+            <input type="submit" value="send">
+            <br><br>
+            Checkbox: <br>
+            <input type="checkbox" checked> I accept the terms
+            <br><br>
+            Car: <br>
+            <select name="car">
+                <option value="">Choice a car</option>
+                <option value="volkswagen">Volkswagen</option>
+                <option value="bmw">BMW</option>
+                <option value="Opel" disabled>Opel</option>
+            </select>
+
+            <br><br>
+            Color: <br>
+            <input type="color" name="color">
+            <br><br>
+            Password: <br>
+            <input type="password" name="password" size="48"> <input type="image" src="klipartz.png" width="50">
+            <br><br>
+            Date: <br>
+            <input type="date"> <br>
+            <br><br>
+            Message: <br>
+            <textarea name="message" cols="50" rows="5" placeholder="type your message" autofocus
+                maxlength="10"></textarea>
+
+        </form>
+
+        <form action="#" method="GET" style="width: 400px;">
+            <fieldset>
+                <legend>Contact</legend>
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="type your name">
+                </p>
+                <p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="type your e-mail">
+                </p>
+                <p> 
+                    <label for="message">Message:</label>
+                    <textarea name="text" id="message" cols="30" rows="10" placeholder="type your message"></textarea>
+                </p>
+            </fieldset>
+            <br>
+            <input type="submit" value="send">
+            <input type="reset" value="clear">
+            <input type="button" value="stop">
+        </form>
+    </div>
+</body>
+
+</html>
