@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html tables</title>
+</head>
+
+<body>
+    <h1 align="center">Table</h1>
+    <table align="center" border="1" cellpadding="10" cellspacing="10">
+        <thead>
+            <tr>
+                <th>Column1</th>
+                <th>Col2</th>
+                <th>Col3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td width="40%">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </td>
+                <td width="150">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, molestias!</p>
+                </td>
+                <td valign="top">Lorem, ipsum dolor.</td>
+            </tr>
+            <tr>
+                <td>My text</td>
+                <td colspan="2">My second text</td>
+            </tr>
+            <tr>
+                <td>Item1</td>
+            </tr>
+            <tr>
+                <td>Sub item1</td>
+                <td>Sub item2</td>
+                <td rowspan="2">Sub item3</td>
+            </tr>
+            <tr>
+                <td colspan="2">Subsub item</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="3" align="center">footer</td>
+        </tfoot>
+    </table>
+</body>
+
+</html>
