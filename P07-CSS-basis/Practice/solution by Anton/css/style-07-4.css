@@ -1,0 +1,86 @@
+body{
+	margin: 0;
+	font-family: Heebo, Arial, sans-serif;
+	font-weight: 400;
+}
+table{
+	width: 1250px;
+	margin: 0 auto;
+	border-spacing: 0;
+}
+
+table .photo{
+	width: 60%;
+}
+
+.photo img{
+	width: 100%;
+}
+
+table .info{
+	height: 53%;
+	vertical-align: middle;
+	border-right: 1px solid rgba(173, 173, 173, 0.5);
+}
+
+.info h1{
+	margin: 5px 40px;
+	margin-left: 40px;
+	font-size: 50px;
+	font-weight: 300;
+}
+
+.info p{
+	margin-left: 40px;
+	margin-right: 30px;
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+.info a{
+	margin-left: 40px;
+	color: black;
+	font-size: 17px;
+	line-height: 3;
+	text-decoration: none;
+	border-bottom: 2px solid black;
+
+}
+
+table .contact{
+	height: 47%;
+	background-color: black;
+	border-bottom: 7px solid white;
+	color: white;
+	vertical-align: top;
+}
+
+.contact h1{
+	margin-bottom: 10px;
+	margin-left: 30px;
+	font-weight: 300;
+	font-size: 50px;
+	line-height: 1;
+}
+
+.contact p{
+	font-size: 17px;
+	margin-left: 30px;
+	margin-right: 30px;
+	line-height: 1.2;
+}
+
+.contact .phone{
+	font-size: 24px;
+	margin-left: 30px;
+	margin-right: 30px;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.contact a{
+	color: white;
+	font-size: 17px;
+	text-decoration: none;
+	border-bottom: 2px solid white;
+}

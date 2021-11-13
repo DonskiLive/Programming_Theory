@@ -1,0 +1,95 @@
+body{
+    background-color: aliceblue;
+}
+h2{
+    font-size: 36px;
+}
+
+.box{
+    width: 300px;
+    height: 100px;
+    border: 5px solid magenta;
+    padding: 10px 0 0 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+.box1{
+    width: 50%;
+    border: 1px solid blue;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.text-green{
+    color:green
+}
+
+.item{
+    font-size: 1.5rem;
+    background-color: aquamarine;
+}
+
+.item2{
+    background-color: beige;
+}
+
+.item3{
+    background-color: red;
+}
+
+.box2{
+    background-color: cornflowerblue;
+    width: 10vw;
+    height: 50vh;
+    margin-bottom: 50px;
+    _height: 100px;
+}
+
+.box3 img{
+    width: 100px;
+    float:right;
+
+}
+
+.box3{
+    padding-bottom: 80px;
+}
+
+ul{
+    list-style: none;
+    margin: 0 0 50px;
+    padding: 0;
+
+}
+
+ul.nav li{
+    float:left;
+    padding-right: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.products{
+    width:900px;
+    _border: 1px solid black;
+    box-sizing: border-box;
+    margin: 10px auto;
+}
+
+.card{
+    border: 1px solid black;
+    padding: 15px;
+    box-sizing: border-box;
+    width: calc(100%/3 - 30px);
+    margin:0 15px;
+    float: left;
+}
+.clear{
+    clear: both;
+}

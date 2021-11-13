@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.header{
+    background: url('./../images/bg-new.png') no-repeat fixed;
+    background-size: cover;
+    height:100vh;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 15px 0;
+}
+
+nav ul li{
+    float: left;
+    margin-right: 20px;
+}
+
+a{
+    color: inherit;  /* color:white */
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.clearfix{
+    clear: both;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-top: 60px;
+    font-weight: lighter;
+    width: 90%;
+}
+
+a.button{
+    border: 1px solid #fff;
+    padding: 20px 50px;
+    border-radius: 10px;
+    margin-top: 80px;
+    display: inline-block;
+}
+
+.bottom-section{
+    padding: 100px 0;
+    margin: 0 -15px;
+}
+
+.card{
+    float: left;
+    margin: 0 15px;
+    width: calc(100%/4 - 30px);
+    text-align: center;
+    border: 1px solid white;
+    padding: 30px 5px;
+    border-radius: 8px;
+}
+
+.card img{
+    width: 30%;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.card h3{
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+article{
+    width: 80%;
+    margin: 50px auto;
+    color: black;
+}
+
+section.portfolio{
+    background-color: cornflowerblue;
+    height: 700px;
+    color: rgba(240, 248, 255, 0.5);
+}
+
+.portfolio img{
+    height: 600px;
+    float: left;
+    margin: 50px 80px 0 50px;
+}
+
+p.letter{
+    float: left;
+    font-size: 44rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text-box{
+    float: left;
+    width: 550px;
+    margin-left: -190px;
+    padding-top: 220px;
+    color: aliceblue;
+}
+
+.text-box h2{
+    font-size: 2rem;
+    width: 240px;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text-box p{
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+}
+
+section.circle-img{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.circle{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: url('./../images/pexels-photo-7889287.jpeg') center right;
+    background-size: 120%;
+}
