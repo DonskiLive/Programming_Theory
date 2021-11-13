@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Montserrat, Helvetica, sans-serif;
+    color: white;
+}
+
+section.top-section{
+    background: url('./images/bg-new.png') no-repeat fixed;
+    background-size: cover;
+    height: 100vh;
+    max-height: 800px;
+}
+
+.container{
+    width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* .top-section .container{
+    overflow: hidden;
+} */
+
+nav ul{
+    list-style: none;
+    text-transform: uppercase;
+    padding: 30px 0;
+}
+
+nav ul li{
+    float: left;
+    margin-right: 15px;
+}
+
+nav ul li a{
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.box-text{
+    display: inline-block;
+    width: 45%;
+}
+
+h1.slogan{
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-top: 60px;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+h1.slogan b{
+    font-weight: 600;
+}
+
+.box-text p{
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+.box-text button{
+    padding: 20px 50px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 80px;
+}
+
+.top-section .container img{
+    float: right;
+    width: 400px;
+    margin-top: 60px;
+}
+
+.bottom-section{
+    background-color: orange;
+    padding: 80px 0;
+    position: relative;
+}
+
+.card{
+    float: left;
+    margin:0 10px;
+    width: calc(100%/4 - 20px);
+    text-align: center;
+    padding: 30px;
+}
+
+.card img{
+    width: 30%;
+    margin-bottom: 15px;
+    cursor:pointer;
+}
+
+.card h3{
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+section.review{
+    padding: 50px 0;
+    color: black;
+}
+
+.review .container{
+    overflow: visible;
+}
+
+.review .container h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.review .container p{
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 50px;
+}
+
+.cards{
+    padding: 50px 30px;
+    margin: 0 -50px;
+
+}
+
+.card-r{
+    display: inline-block;
+    margin: 0 20px;
+    width: calc(100%/3 - 40px);
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 50px 20px 20px;
+    position: relative;
+}
+
+.cards .card-r p{
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card-r img.avatar{
+    /* display: none; */
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 6px solid orange;
+    top: -30px;
+    left: -30px;
+    border-radius: 50%;
+}
+
+img.img-link{
+    border: 2px solid orange;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
