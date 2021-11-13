@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Montserrat, Helvetica, sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+#header{
+    background: url('./images/bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    max-height: 800px;
+    color: white;
+    position: relative;
+}
+
+.container{
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+nav{
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+nav img{
+    float: left;
+    width: 60px;
+}
+
+nav ul{
+    float:right;
+}
+
+nav ul li{
+    display: inline-block;
+    width: 100px;
+    padding: 15px 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 0 15px;
+
+}
+
+nav ul li:hover, .sub-menu ul li:hover{
+    background-color: rgba(45,45,45, 0.7);
+}
+
+.sub-menu ul{
+    position: absolute;
+    width: 100px;
+    display: none;
+}
+
+.sub-menu ul li{
+    padding: 15px;
+}
+
+ul li:hover ul{
+    display: block;
+    margin-top: 15px;
+}
+
+.middle-box{
+    margin-top: 150px;
+    text-align: center;
+}
+
+
+.middle-box h1{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.middle-box p{
+    width: 60%;
+    margin: 15px auto;
+}
+
+.buttons{
+    text-align: center;
+    padding: 15px;
+}
+
+.btn{
+    border: 2px solid white;
+    text-decoration: none;
+    display: inline-block;
+    width: 150px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 10px;
+    font-size: 0.8rem;
+    line-height: 36px;
+}
+
+.btn img, .btn span{
+    vertical-align: middle;
+}
+
+.btn img{
+    margin-right: 5px;
+}
+
+.btn-more{
+    background-color: orange;
+}
+
+.btn:hover {
+    background-color: rgba(255, 166, 0, 0.66);
+}
+
+.btn-message{
+    position: absolute;
+    bottom:30px;
+    right: 30px;
+    background-color: orange;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+.btn-message:hover{
+    border: 3px solid #fff;
+}
+
+/* Sport section */
+.sport .container{
+    position: relative;
+    margin-top: 50px;
+    height: 1000px;
+    color: #fff;
+
+}
+
+.circle{
+    width: 200px;
+    height: 200px;  
+    position: relative;
+    top: 270px;
+    margin-right: 50px; 
+    border: 40px solid #20baca;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.text-box{
+    background-color: #20baca;
+    padding: 30px 50px 90px;
+    width: 60%;
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    height: 470px;
+}
+
+.text-box h2{
+    font-size: 2.9rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.text-box p{
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.image-link{
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.image-link span{
+    border-bottom:1px solid white ;
+    cursor: pointer;
+}
+
+.text-box button{
+    padding: 10px 40px;
+    background-color: #fff;
+    color: #20baca;
+    text-transform: uppercase;
+    border: 0px;
+    font-weight: 600;
+    letter-spacing: .2rem;
+}
+
+.main-img{
+    position: relative;
+    width: 480px;
+    height: 480px;
+    background: url('./images/try-min.jpeg');
+    border-radius: 50%;
+    background-size: cover;
+    top:140px;
+    left:20px;
+    box-shadow: 8px 8px 5px rgba(45,45,45, 0.3);
+
+}
+
+.solid-circle{
+    width: 150px;
+    height: 150px;
+    background-color: #20baca;
+    border-radius: 50%;
+    position: absolute;
+    right: 340px;
+    top:340px;
+}
+
+.small-img{
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top:280px;
+    right: -120px;
+    background-image: url('./images/sdfee.jpeg');
+    background-size: cover;
+    border: 16px solid #20baca;
+    border-radius: 50%;
+    box-shadow: 8px 8px 5px rgba(45,45,45, 0.3);
+}
