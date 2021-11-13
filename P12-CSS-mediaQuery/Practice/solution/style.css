@@ -1,0 +1,451 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Lato, sans-serif;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+p{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: #777;
+    text-align: center;
+}
+
+.divider{
+    height: 2px;
+    width: 80px;
+    margin-bottom: 10px;
+    background-color: #f57365;
+}
+
+/* Header */
+
+#header{
+    background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.21612394957983194) 70%, rgba(0,0,0,1) 100%), url('./images/Tomatoes_Pasta.jpg') ;
+    height: 100vh;
+    max-height: 800px;
+    color: white;
+    text-align: center;
+    background-size: cover;
+}
+
+#header .nav{
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+#header .logo{
+    width: 120px;
+    height: 120px;
+    padding: 20px;
+    background-color: #fe0804ca;
+    border-radius: 50%;
+}
+
+.nav .logo img{
+    width: 100%;
+}
+
+#header .nav ul li{
+    display: inline-block;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+#header ul{
+    margin-left: auto;
+}
+
+#header h3{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 60px;
+    font-size: 2.5rem;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+#header h1{
+    font-size: 8rem;
+    text-transform: uppercase;
+}
+
+#header a{
+    display: inline-block;
+    margin: 20px 0 40px;
+    padding: 20px 80px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#header h4{
+    color:rgba(255,255,255,0.7);
+    text-transform: uppercase;
+}
+
+#header h4 span{
+    font-weight: 700;
+    color:white;
+    text-decoration: underline;
+}
+
+#header h4 span:hover{
+    cursor: pointer;
+}
+
+#info{
+    padding: 100px 0;
+}
+
+#info .cards-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#info .card{
+    margin: 0 20px;
+    flex-basis: calc(100%/3 - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#info .card-img{
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border:2px solid black;
+    margin-bottom: 15px;
+}
+
+#info .card-img img{
+    width: 100%;
+}
+
+#info .card h3{
+    font-size:1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* #info .card .divider{
+    height: 2px;
+    width: 80px;
+    margin-bottom: 10px;
+    background-color: #f57365;
+} */
+
+/* #info .card p{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: #777;
+    text-align: center;
+} */
+
+#info::after{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #777;
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* App section */
+#app-section .container{
+    display: flex;
+    _overflow: hidden;
+}
+
+#app-section .phone-block{
+    flex-basis: 360px;
+    height: 480px;
+    position: relative;
+    background: url('./images/iphone.png') no-repeat;
+    background-size: cover;
+    align-self: flex-end;
+}
+
+
+#app-section .phone-block img{
+    position: absolute;
+    top:25%;
+    right: 8%;
+    width: 78%;
+}
+
+#app-section .text-block{
+    flex-basis: calc(100% - (360px + 8%));
+    margin-left: auto;
+    text-align: left;
+    align-self: flex-start;
+    margin-bottom: 150px;
+}
+
+/* text-block
+flex-basis: calc(100% - 400px); */
+
+#app-section h3{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 30px 0 10px;
+}
+
+#app-section p{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-right: 10px;
+    height: 39px;
+    width: 112px;
+}
+
+.btn_appstore{
+    background-image: url('./images/btn_appstore.png');
+}
+
+.btn_g_play{
+    background-image: url('./images/btn_g_play.png');
+    background-size: 112px 39px;
+}
+
+/* Comment section */
+
+#comments-section{
+    position: relative;
+    top:-40px;
+    text-align: center;
+    padding: 70px 0;
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.8) 0%,
+        rgba(0,0,0,0.2) 100%
+    ),
+    url('./images/Tomatoes_Pasta.jpg') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+#comments-section p{
+    color:#fff;
+}
+
+#comments-section .avatar{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    border: 4px solid #777;
+}
+
+#comments-section .avatar img{
+    position: absolute;
+    left: -25px;
+    top:-10px;
+}
+
+#comments-section .message{
+    font-size: 1.4rem;
+    font-weight: 200;
+    line-height: 2rem;
+    margin-top: 10px;
+}
+
+#comments-section .signature{
+    font-style: italic;
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+.bottom-nav .dot{
+    background-color: #fff;
+    opacity: 0.6;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 20px 5px 0;
+}
+
+.bottom-nav .dot:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Recipes */
+
+#recipes{
+    padding-top: 40px;
+}
+
+#recipes h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#recipes .recipes-cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#recipes .divider{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.card-r{
+    position: relative;
+    margin: 2px;
+    flex-basis: calc(100%/5 - 4px);
+   /*  flex-basis: 200px; */
+    margin-bottom: -2px;
+}
+
+#recipes .card-r img{
+    width: 100%;
+}
+
+#recipes .card-r h3{
+    position: absolute;
+    top:30%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+#recipes h3 span{
+    display: block;
+    position: absolute;
+    top:-20px;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+@media screen and (max-width:800px){
+    .logo{
+        position: absolute;
+        top:80px;
+        left:calc(50% - 60px)
+    }
+
+    #header h3{
+        margin-top: 200px;
+        font-size: 1.5rem;
+    }
+    #header h1{
+        font-size: 4rem;
+    }
+
+    #header a{
+        font-size: 0.8rem;
+        padding: 10px 50px;
+    }
+    #header h4{
+        display: none;
+    }
+
+    #app-section .phone-block{
+        display: none;
+    }
+
+    #app-section .text-block{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    #app-section p{
+        text-align: center;
+    }
+
+    #app-section .divider{
+        margin: 15px auto;
+    }
+
+    .card-r{
+        flex-basis: calc(100%/3 - 4px);
+    }
+
+    .recipes-cards .card-r:last-child{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    #header .logo{
+        width: 140px;
+        height: 140px;
+        left: calc(50% - 70px);
+        top:10%;
+    }
+
+    #header .nav ul li:not(:last-child){
+        display: none;
+    }
+
+    #header .nav ul li:last-child{
+        width: 25px;
+    }
+
+    #header .nav ul li:last-child img{
+        width: 100%;
+    }
+
+    #info .card{
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    #info .cards-box{
+        flex-wrap: wrap;
+        
+    }
+
+    #app-section{
+        display: none;
+    }
+
+    #comments-section{
+        display: none;
+    }
+
+    .card-r{
+        flex-basis: calc(50% - 4px);
+    }
+
+    .recipes-cards .card-r:last-child{
+        display: block;
+    }
+
+    #info {
+        padding-bottom: 0px;
+    }
+
+}
