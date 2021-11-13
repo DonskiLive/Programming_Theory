@@ -1,0 +1,184 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+p {
+    margin-top: 10px;
+}
+
+p.link1 a:hover{
+    color: red;
+    font-size: 120%;
+}
+
+p.link2 a:hover{
+    font-size: 150%;
+}
+
+p.link2 a:active{
+    background-color: yellow;
+}
+
+p.link3 a:hover{
+    background-color: red;
+    color:black
+}
+
+p.link4 a:link, p.link4 a:visited{
+    text-decoration: none;
+    color:green;
+}
+
+p.link4 a:active, p.link4 a:hover{
+    text-decoration: underline;
+}
+
+p.paragraph a:link{
+    color: aquamarine;
+}
+
+p.paragraph a:visited{
+    color:greenyellow
+}
+
+p.paragraph a:hover{
+    background-color: yellow;
+}
+
+p.paragraph a:active{
+    color:red
+}
+
+p.paragraph:active{
+    background-color: #ddd;
+}
+
+.hidden-item{
+    margin-top: 20px;
+    height: 100px;
+}
+.hidden-item p{
+    display: none;
+    background-color: yellow;
+    padding: 20px 0;
+}
+
+.hidden-item:hover p{
+    display: block;
+}
+
+nav{
+    background-color: green;
+    margin-bottom: 50px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    display: inline-block;
+}
+
+nav ul li{
+    display: inline-block;
+    width: 200px;
+}
+
+ul li:hover{
+    background-color: rgba(21, 153, 76, 0.8);
+}
+
+nav ul li ul {
+    position: absolute;
+    display: none;
+    width: 200px;
+}
+
+ul li:hover ul{
+    display: block;
+}
+
+ul li ul li{
+    background-color: rgba(21, 153, 76, 0.8);
+}
+
+ul li ul li:hover{
+    background-color: rgba(45,45,45,0.7);
+}
+
+ul li ul li:first-child a{
+    color: aqua;
+}
+
+ul li ul li:nth-child(3n):hover{
+    background-color: red;
+}
+
+.cards{
+    margin-top: 50px;
+}
+
+.card{
+    float:left;
+    margin: 20px;
+    padding: 20px 10px;
+    border: 1px solid black;
+    width: calc(100%/4 - 40px)
+}
+
+.card p::first-line{
+    color:green;
+    font-weight: bold;
+}
+
+.card p::first-letter{
+    font-size: 24px;
+    font-style: italic;
+    color: red;
+}
+
+.card p::selection{
+    background-color: darkblue;
+    color:aliceblue
+}
+
+.blockquote{
+    margin: 40px auto;
+    line-height: 1.4rem;
+    width: 50%;
+    text-align: center;
+
+}
+
+/* .blockquote::before{
+    display: inline-block;
+    content: '';
+    height: 2px;
+    background-color: black;
+    width: 100%;
+} */
+
+.blockquote::before, .blockquote::after{
+    display: inline-block;
+    content: '\AB';
+    font-size: 66px;
+    width: 40px;
+    height: 40px;
+    background-color: cornflowerblue;
+    color: aliceblue;
+    vertical-align: bottom;
+}
+
+.blockquote::after{
+    content: '\BB';
+    vertical-align: top;
+}

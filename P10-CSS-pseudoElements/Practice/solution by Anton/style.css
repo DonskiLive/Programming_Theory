@@ -1,0 +1,249 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Oswald, sans-serif;
+}
+
+.section-top{
+	background-color: #f1c50e;
+	height: 100vh;
+	max-height: 800px;
+	position: relative;
+}
+
+.bg{
+	background-color: #f05735;
+	width: 35%;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+}
+
+.container{
+	position: relative;
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.content{
+	display: inline-block;
+	margin-top: 80px;
+}
+
+.text-box{
+	width: 350px;
+	height: fit-content;
+}
+
+.text-box h1{
+	color: #f05735;
+	font-weight: 400;
+	font-size: 4.5rem;
+	line-height: 1;
+	margin: 60px 0px 40px 0px;
+}
+
+.text-box h1::first-line{
+	font-size: 3rem;
+	color: black;
+}
+
+.text-box p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+.content img{
+	position: absolute;
+	width: 800px;
+	right: 0px;
+	top: 80px;
+}
+
+.text-box a{
+	display: inline-block;
+	background-color: #f05735;
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: .2rem;
+	text-transform: uppercase;
+	padding: 10px 30px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+.text-box a:hover{
+	background-color: #f057358a;
+	border: 2px solid white;
+}
+
+/* ---------------- Section two ------------------------ */
+
+.section-bottom{
+	height: 100vh;
+	max-height: 800px;
+}
+
+.header{
+	width: 600px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.header h1{
+	display: inline-block;
+	margin-top: 30px;
+	width: 100%;
+	color: #42434b;
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.header h1::first-line{
+	font-size: 1.5rem;
+	text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.container article table{
+	margin: 0 auto;
+	width: 70%;
+	height: 550px;
+	border-spacing: 15px;
+}
+
+table .col-one{
+	width: 50%;
+	background: url(./img/sec2_img1.jpg) no-repeat top;
+	background-size: cover;
+}
+
+table .col-two{
+	width: 25%;
+	height: 50%;
+	background-color: #ebfcfc;
+}
+
+table .col-two img{
+	width: 40%;
+	padding: 10px;
+	background-color: #38c4c28c;
+	border-radius: 50%;
+	margin: 0px 20px 10px 20px;
+}
+
+table .col-two h2{
+	color: #808080;
+	line-height: 1.2;
+    font-size: 1.5rem;
+	text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+	margin: 0px 20px 10px 20px;
+}
+
+table .col-two p{
+	font-family: 'Open Sans', sans-serif;
+	color: #42434b;
+	font-size: 0.875rem;
+    font-style: italic;
+	font-weight: 400;
+    line-height: 1.7;
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+
+table .col-two a{
+	display: inline-block;
+	background-color: transparent;
+	text-decoration: none;
+	color: #38c4c1;
+	font-size: 14px;
+	letter-spacing: .2rem;
+	text-transform: uppercase;
+    font-weight: 500;
+	margin-left: 20px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+table .col-two a:hover{
+	border-bottom: 2px solid #38c4c1;
+}
+
+table .col-three{
+	width: 25%;
+	background-color: #fff2fa;
+}
+
+table .col-three img{
+	width: 40%;
+	padding: 10px;
+	background-color: #fe7ec99a;
+	border-radius: 50%;
+	margin: 0px 20px 10px 20px;
+}
+
+table .col-three h2{
+	color: #808080;
+	line-height: 1.2;
+    font-size: 1.5rem;
+	text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+	margin: 0px 20px 10px 20px;
+}
+
+table .col-three p{
+	font-family: 'Open Sans', sans-serif;
+	color: #42434b;
+	font-size: 0.875rem;
+    font-style: italic;
+	font-weight: 400;
+    line-height: 1.7;
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+
+table .col-three a{
+	display: inline-block;
+	background-color: transparent;
+	text-decoration: none;
+	color: #fe7ec9;
+	font-size: 14px;
+	letter-spacing: .2rem;
+	text-transform: uppercase;
+    font-weight: 500;
+	margin-left: 20px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+table .col-three a:hover{
+	border-bottom: 2px solid #fe7ec9;
+}
+
+table .col-four{
+	background: url(./img/sec2_img2.jpg) no-repeat top;
+	background-size: cover;
+}
+
+table .col-five{
+	background: url(./img/sec2_img3.jpg) no-repeat top;
+	background-size: cover;
+}
+
+
+
