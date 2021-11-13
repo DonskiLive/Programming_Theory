@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "bootstrap": "^5.0.1",
+    "font-awesome": "^4.7.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3"
+  }
+}

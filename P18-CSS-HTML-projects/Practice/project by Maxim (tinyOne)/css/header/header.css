@@ -1,0 +1,115 @@
+@import "animation-header.css"; /* animations for header section */
+
+/* --- header top start --- */
+
+#header {
+    background: var(--bg-head-);
+    height: 100vh;
+    padding-top: 58px;
+    overflow: hidden;
+}
+
+#header .nav-menu {
+    opacity: 0;
+    animation: topFalling 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+#header #logo {
+    display: block;
+    width: 149px;
+}
+
+#header .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+
+#header .menu-item {
+    margin: 0 5px;
+    padding-left: 41px;
+    _flex-basis: calc(100% / 3 - 10px);
+    flex-basis: 150px;
+}
+
+#header .menu-link {
+    display: block;
+    font-family: PTSans-Family, sans-serif;
+    font-size: var(--fs-22);
+    color: var(--fc-dark);
+    text-decoration: none;
+    text-align: right;
+    transition: color 0.2s linear;
+}
+
+#header .menu-link:hover {
+    color: var(--fc-white);
+}
+
+/* --- header top end --- */
+
+/* --- header bottom start --- */
+
+#header .w-400 {
+    opacity: 0;
+    margin-top: 110px;
+    /*width: 400px;*/
+    animation: leftMoving 1.5s 4s ease-in-out forwards;
+}
+
+#header .w-400 h1 {
+    font-family: PTSans-Family, sans-serif;
+    font-size: var(--fs-32);
+    color: var(--fc-dark);
+}
+
+#header .w-400 h3 {
+    font-family: PTSans-Family, sans-serif;
+    font-size: var(--fs-20);
+    color: var(--fc-head-tesis);
+    margin-top: 20px;
+}
+
+#header .w-400 p {
+    font-family: PTSans-Family, sans-serif;
+    font-size: var(--fs-16);
+    color: var(--fc-text);
+    margin-top: 30px;
+}
+
+#header .menu-fonts {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0;
+}
+
+#header .menu-fonts a {
+    text-decoration: none;
+}
+
+#header .menu-fonts a {
+    text-decoration: none;
+    color: white;
+}
+
+#header .menu-fonts i {
+    padding: 0 30px 0 0;
+    color: var(--fc-dark);
+    transition: 0.1s color linear;
+}
+
+#header .menu-fonts i:hover {
+    color: white;
+}
+
+#header .m-top-60 {
+    opacity: 0;
+    margin-top: 60px;
+    animation: rightMove 1.5s 4s ease-in-out forwards;
+}
+
+/* --- header bottom end --- */

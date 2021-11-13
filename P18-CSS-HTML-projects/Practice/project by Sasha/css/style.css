@@ -1,0 +1,204 @@
+html, body{
+    font-family: 'Monserrat', sans-serif;
+}
+
+ul, li{
+    display: block;
+}
+
+h1, h3{
+    font-weight: 600;
+}
+
+h2{
+    font-family: 'Philosopher', 'Times New Roman', Times, serif;
+}
+
+.main{
+    position: relative;
+}
+i.icon-message{
+    color: yellowgreen;
+    position: fixed;
+    right: 100px;
+    bottom: 50px;
+    z-index: 10;
+    _transition: transform 1s ease;
+}
+i.icon-message:hover{
+    transform: scale(1.2);
+    animation: shakeX;
+}
+
+header{
+    background: linear-gradient(rgba(0, 0, 0, 0.26) 0%, rgba(0,0,0, 0.5) 100%), url('./../img/Check-Up-35_MI.jpg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+#header img{
+    background-color: white;
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+    padding: 5px;
+}
+
+#header a{
+    color: white;
+}
+
+#header a:hover{
+    color:yellowgreen;
+}
+
+#header p{
+    font-size: 36px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: white;
+
+}
+.main-btn{
+    width: 200px;
+    text-decoration: none;
+    background-color: skyblue;
+    border-radius: 10px;
+    transition: background-color 2s linear, transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 2s;
+}
+.main-btn:hover{
+    
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    padding: 10px;
+    transform: scale(1.2);
+    background-color: rgba(135, 207, 235, 0.425);
+}
+
+#header .intro{
+    _margin-top: 100px;
+    font-family: "Philosopher", 'Times New Roman', Times, serif;
+}
+
+#service .card{
+    _box-shadow: 0 5px 10px rgba(0,0,0,0.5); /* Параметры тени */
+    padding: 10px;
+    transition: transform 1s linear;
+    background: linear-gradient(rgba(0, 0, 0, 0.26) 0%, rgba(0,0,0, 0.5) 100%);
+    background-size: cover;
+    border: none;
+    
+}
+i.icon-service{
+    color: white;
+}
+
+#service .card .btn-service{
+    background-color: skyblue;
+    transition: transform 0.5s linear;
+    color: white;
+}
+#service .card .btn-service:hover{
+    transform: scale(1.1);
+}
+#service .card-2{
+    background: url('./../img/16676271555e86c94198c5a3.74819710.jpg') no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+#service .card-6{
+    background: linear-gradient(rgba(0, 0, 0, 0.26) 0%, rgba(0,0,0, 0.5) 100%), url('./../img/gel_dlya_uzi_mediagel.jpg') no-repeat;
+    background-size: cover;
+    border: none;
+}
+#service .card-1{
+    background: linear-gradient(rgba(0, 0, 0, 0.26) 0%, rgba(0,0,0, 0.5) 100%), url('./../img/16676271555e86c94198c5a3.74819710.jpg') no-repeat;
+    background-size: cover;
+    border: none;
+}
+#service .card-2{
+    background: linear-gradient(rgba(0, 0, 0, 0.26) 0%, rgba(0,0,0, 0.5) 100%), url('./../img/3d980862d5085f9437f86ded6b5565f0_XL.jpg') no-repeat;
+    background-size: cover;
+    border: none;
+}
+#service .card-3{
+    background: linear-gradient(rgba(0, 0, 0, 0.26) 0%, rgba(0,0,0, 0.5) 100%), url('./../img/unnamed.jpg') no-repeat;
+    background-size: cover;
+    border: none;
+}
+#service .card-5{
+    background: linear-gradient(rgba(0, 0, 0, 0.26) 0%, rgba(0,0,0, 0.5) 100%), url('./../img/vesi.jpg') no-repeat;
+    background-size: cover;
+    border: none;
+}
+#service .card-4{
+    background: linear-gradient(rgba(0, 0, 0, 0.26) 0%, rgba(0,0,0, 0.5) 100%), url('./../img/shutterstock_519223267.jpg') no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+
+@media screen and (max-width: 768px){
+    i.icon-message{
+        display: none;
+    }
+    #header .text-section{
+        transform: scale (0.8);
+        margin-top: 1px;
+    }
+    #service .card{
+        margin: 10px 10px;
+    }
+
+    
+}
+
+
+#clinics .clinics-boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    gap: 1em;
+    
+}
+#clinics box{
+    position: relative;
+    
+    
+}
+#clinics p{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+    
+}
+
+
+#clinics .box:hover{
+    background-color: yellowgreen;
+
+}
+
+#clinics .box:hover h3{
+    opacity: 0;
+}
+#clinics .box:hover p{
+    opacity: 1;
+}
+
+.box{
+    background-color: silver;
+}
+#contact{
+    background-color:rgba(88, 124, 138, 0.075);
+    height: 100vh;
+}
+
+#contatc .btn-secondary{
+    background-color: yellowgreen;
+}
+
+
+

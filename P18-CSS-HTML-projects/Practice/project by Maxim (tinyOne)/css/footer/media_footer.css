@@ -1,0 +1,15 @@
+@media screen and (max-width: 992px){
+    #footer {
+        height: 100%;
+    }
+
+    #footer #email {
+        width: 100%;
+        margin: 15px 70px;
+    }
+
+    #footer #submit {
+        width: 100%;
+        margin: 15px 70px;
+    }
+}

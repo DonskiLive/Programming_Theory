@@ -1,0 +1,77 @@
+#footer {
+    height: 100vh;
+    padding-top: 14%;
+    background-color: var(--bg-foot);
+}
+
+#footer h1 {
+    font-family: PTSans-Family, sans-serif;
+    font-size: var(--fs-32);
+    text-align: center;
+    color: var(--fc-logo);
+    line-height: 32px;
+    font-weight: 700;
+}
+
+#footer h3 {
+    font-size: var(--fs-20);
+    padding: 30px 50px;
+    line-height: 24px;
+    color: var(--fc-decs);
+    font-weight: 400;
+    font-family: PTSans-Family, sans-serif;
+    text-align: center;
+}
+
+#footer #email {
+    width: 580px;
+    height: 50px;
+    background-color: var(--bg-white);
+    color: var(--fc-decs);
+    border-radius: 10px;
+    padding-left: 15px;
+    transition: box-shadow 0.3s linear;
+    border: none;
+}
+
+#footer input[type='email']:focus {
+    outline: none;
+    box-shadow: 0 0 20px var(--bg-head-);
+}
+
+#footer input[type='email']:active {
+    font-size: var(--fs-16);
+    line-height: 20px;
+    font-weight: 400;
+    font-family: PTSans-Family, sans-serif;
+}
+
+#footer #submit {
+    width: 126px;
+    height: 50px;
+    background-color: var(--bg-head-);
+    border-radius: 10px;
+    border: none;
+    transition: border 0.2s linear;
+}
+
+#footer #submit:hover {
+    border: 2px solid var(--bg-white);
+}
+
+#footer #submit[value] {
+    font-size: var(--fs-16);
+    line-height: 24px;
+    color: var(--fc-dark);
+    font-weight: 700;
+    font-family: PTSans-Family, sans-serif;
+}
+
+#footer p {
+    font-size: var(--fs-16);
+    line-height: 20px;
+    color: var(--fc-white);
+    font-weight: 400;
+    font-family: PTSans-Family, sans-serif;
+    text-align: center;
+}

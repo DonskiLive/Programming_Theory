@@ -1,0 +1,66 @@
+p.intro{
+	font-family: 'Lobster', cursive, serif;
+	font-style: italic;
+	font-size: 40px;
+	color: black;
+	margin-top: 100px;
+	margin-bottom: 0 !important;
+	text-shadow: 1.5px 1.5px rgba(8, 8, 8, 0.466);
+}
+
+#header h1{
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 40px;
+	animation: pulse;
+	animation-delay: 2s;
+	animation-duration: 2s;
+	padding: 0;
+	text-shadow: 1.5px 1.5px rgba(8, 8, 8, 0.466);
+}
+
+a.main-btn{
+	font-family: 'Lobster', cursive, serif;
+	color: black;
+	font-weight: 500;
+	background-color: #fed136;
+	border-radius: 10px;
+	border: 3px solid #fed136;
+	text-decoration: none;
+	transition: background-color 1s ease;
+	width: 240px;
+}
+
+a.main-btn:hover{
+	background-color: #fed33679;
+}
+
+@media (max-width: 780px) {
+	p.intro{
+		font-size: 30px;
+	}
+	#header h1{
+		font-size: 35px;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.logo-name > span{
+		font-size: 1.7rem;
+	}
+	#header p.intro{
+	padding-top: 50px !important;
+	}
+	a.main-btn{
+		margin-bottom: 40px;
+	}
+	p.intro{
+		font-size: 20px;
+	}
+	#header h1{
+		font-size: 25px;
+	}
+	a.main-btn{
+		width: 200px;
+	}
+
+}

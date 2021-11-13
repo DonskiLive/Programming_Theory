@@ -1,0 +1,43 @@
+@import './css/bootstrap.min.css'; /* подключаем Bootstrap */
+
+@import './css/animate.min.css'; /* подключаем анимацию https://animate.style/ */
+
+@import './css/all.min.css'; /* подключаем fontawesome-free-5.15.3-web */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); /* подключаем fontawesome-free-4.7.0-web */
+
+/* Google Fonts - PT Sans / Lobster */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+/* Global styles */
+@import "./css/style.css";
+
+/* Header styles*/
+@import "./css/header/loading-page.css"; /* страница загрузки, взята у Максима */
+@import "./css/header/header-bg.css"; /* задний фон главной страницы */
+@import "./css/header/logo.css"; /* использование bootstrap и структурного псевдокласа */
+@import "./css/header/nav-menu.css"; /* гамбургер меню */
+@import "./css/header/cube-3d.css"; /* анимация - 3в куб использование keyframes */
+@import "./css/header/text-link.css"; /* использование bootstrap */
+
+/* Section 1 styles - Info page */
+@import "./css/section-1/sc1-bg.css"; /* задний фон - использование псевдоэлемента before after */
+@import "./css/section-1/text-info.css"; /* замена текста при наведении - hover display: none */
+@import "./css/section-1/phone-block.css"; /* наложение слоёв + анимация */
+
+/* Section 2 styles - Video Instructions (cards) */
+@import "./css/section-2/sc2.css"; /* bootstrap + flex container + cards */
+
+/* Section 3 styles - Comments and more Games Introduction */
+@import "./css/section-3/sc3-bg.css"; /* задний фон - использование linear-gradient */
+@import "./css/section-3/comments.css"; /* создание аватара - обрезание и уменьшение картинки */
+@import "./css/section-3/games-intro.css"; /* flex container + flex-basis (width for flex) */
+
+/* Section 4 styles - Photo galery */
+@import "./css/section-4/sc4-bg.css"; /* задний фон с использованием видео и рамок */
+@import "./css/section-4/photos.css"; /* использование grid и media для адаптации картинок */
+
+/* Footer styles */
+@import "./css/footer/footer.css"; /* использование gif и иконок */

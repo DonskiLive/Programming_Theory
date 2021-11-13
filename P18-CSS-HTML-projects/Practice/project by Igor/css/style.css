@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header start */
+#header {
+    background: radial-gradient(
+            circle,
+            rgba(0, 0, 0, 0.10127801120448177) 62%,
+            rgba(0, 0, 0, 0.40379901960784315) 72%,
+            rgba(0, 0, 0, 1) 100%,
+            rgba(0, 0, 0, 1) 100%
+        ),
+        url(./../images/csm_spuerkel-header-mobile-werkstatt-uebersicht_1f15e2f65a.jpg)
+            no-repeat center center;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+#header nav {
+    float: right;
+    background-color: rgba(32, 80, 238, 0.473);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+#header nav li {
+    list-style: none;
+    padding-right: 10px;
+    float: left;
+}
+#header nav a:hover {
+    color: red;
+}
+#header nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+.logo {
+    width: 150px;
+    height: 150px;
+    background: url(./../images/thumb2-bmw-blue-logo-4k-blue-neon-lights-creative-blue-abstract-background.jpg);
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    opacity: 0.7;
+}
+.logo img {
+    width: 100%;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+.logo h3 {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+}
+.text-center {
+    margin-top: 20px;
+    background-color: rgba(32, 80, 238, 0.24);
+    text-align: center;
+    border-radius: 10px;
+    animation: fadeInDown 2s;
+}
+.text-center h1 {
+    font-size: 170px;
+    margin-top: -81px;
+    text-shadow: 2px 2px 3px black;
+}
+.text-center h2 {
+    font-size: 100px;
+    margin-top: -50px;
+    text-shadow: 2px 2px 3px black;
+}
+.text-center p {
+    font-size: 30px;
+    text-shadow: 2px 2px 3px black;
+    text-transform: uppercase;
+}
+
+.logo-center {
+    width: 250px;
+    height: 185px;
+    margin: 0 auto;
+    transition: 0.5s linear;
+    animation: backInLeft 2s;
+}
+.logo-center:hover {
+    width: 300px;
+    height: 220px;
+}
+
+.logo-center img {
+    width: 100%;
+}
+#header .down-tabs {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+#header .down-tabs img {
+    width: 100%;
+}
+#header .down-tabs:hover {
+    background-color: rgba(75, 69, 128, 0.63);
+    border-radius: 15px;
+    transition: 0.5s linear;
+}
+/* Header end */
+/* About us section */
+#about-us .container {
+    background-color: rgba(166, 159, 199, 0.589);
+    text-align: center;
+}
+#about-us h1 {
+    font-size: 80px;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 3px black;
+}
+#about-us h3 {
+    text-align: center;
+    color: black;
+    padding-bottom: 20px;
+}
+#about-us table {
+    height: 700px;
+    margin: 0 auto;
+}
+#about-us table td {
+    width: 50%;
+    text-align: justify;
+    vertical-align: middle;
+    padding-left: 20px;
+    color: rgb(51, 8, 68);
+    font-size: 1.2rem;
+    vertical-align: top;
+}
+
+#about-us img {
+    width: 100%;
+    height: 100%;
+}
+/* About us section end */
+/* Our services section start */
+#our-services {
+    margin-bottom: 90px;
+}
+
+#our-services h1 {
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+.our-service-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.master-photo {
+    width: 400px;
+}
+.master-photo img {
+    width: 100%;
+}
+#our-services .service-icon {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.service-icon div {
+    margin: 0 auto;
+    text-align: center;
+}
+.service-icon div img {
+    width: 60%;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: rgb(148, 152, 185);
+    transition: background-color 0.5s linear;
+}
+.service-icon div img:hover {
+    background-color: rgb(49, 197, 197);
+}
+.service-icon div p {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+/* Our services section end */
+/* <!-- Comments section- start --> */
+#comments h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 80px;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+#comments {
+    background-color: rgba(166, 159, 199, 0.589);
+}
+#comments .container {
+    width: 50%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+}
+#comments .container img {
+    width: 50%;
+    border-radius: 50%;
+    padding: 5px;
+}
+.box {
+    align-self: center;
+}
+/* Comments section-end */
+/* Contact us section */

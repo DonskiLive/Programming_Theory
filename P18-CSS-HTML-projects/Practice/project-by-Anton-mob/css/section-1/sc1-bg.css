@@ -1,0 +1,81 @@
+#container-1{
+    position: relative;
+}
+
+.bg-yellow{
+    background-color: #FBC500; 
+    height: 100vh; 
+}
+
+.main_back::before{
+    content: "";
+    position: absolute;
+    background-image: url(./../../img/back_l.png);
+    width: 127px;
+    height: 540px;
+    left: 0px;
+    top: 0px;
+    background-size: auto;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.main_back{
+    width: 100%;
+    background-image: url(./../../img/back_img.jpg);
+    height: 540px;
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 110px;
+    padding-bottom: 0;
+    color: white;
+}
+
+.main_back::after{
+    content: "";
+    position: absolute;
+    background-image: url(./../../img/back_r.png);
+    width: 127px;
+    height: 540px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    background-size: auto;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+@media (max-width: 1000px) {
+	#phone{
+		display: none;
+	}
+}
+
+@media (max-width: 780px) {
+	.main_back::before, .main_back::after{
+		display: none;
+	}
+    .main_back{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .bg-yellow{
+        height: 1200px; 
+    }
+    #container-1 h1{
+        padding-top: 10px !important;
+    }
+	#phone{
+        margin-top: 30px;
+		display: block;
+	}
+    .main_back{
+        width: 100%;
+    }
+}

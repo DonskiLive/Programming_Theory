@@ -1,0 +1,115 @@
+.nav-logo img{
+    box-sizing: border-box;
+    border-radius: 30px;
+    padding-bottom: -50px;
+    border-bottom: 15px solid transparent;
+}
+
+.nav-logo{
+    background-color: white;
+    position: fixed;
+    height: 80px;
+    width: 90%;
+    _margin: 0 auto;
+    top: 0;
+    left: 4%;
+    border-radius: 0px 0px 20px 20px;
+    border: 3px solid #fcdb00;
+    border-top: none;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    z-index: 10;
+}
+
+#logo{
+    height: 110px;
+    margin-top: -14px;
+}
+
+.logo-name{
+    font-family: 'Lobster', cursive, sans-serif;
+    font-size: 35px;
+    display: inline-block;
+    padding-top: 10px;
+    z-index: 10;
+}
+
+.logo-name span{
+    padding: 0;
+    margin: 0;
+    text-shadow: 1.3px 1.3px rgba(8, 8, 8, 0.466);
+    
+}
+
+.logo-name span:nth-child(3n+1){
+    color: greenyellow;
+    animation: green-red-blue 4s linear infinite;
+}
+.logo-name span:nth-child(3n+3){
+    color: red;
+    animation: red-blue-green 4s linear infinite;
+}
+.logo-name span:nth-child(3n+2){
+    color: blue;
+    animation: blue-green-red 4s linear infinite;
+}    
+
+@keyframes green-red-blue {
+	from{color: greenyellow;}
+    33%{color: red;}
+    66%{color: blue;}
+    to{color: greenyellow;}
+}
+
+@keyframes red-blue-green {
+	from{color: red;}
+    33%{color: blue;}
+    66%{color: greenyellow;}
+    to{color: red;}
+}
+
+@keyframes blue-green-red {
+	from{color: blue;}
+    33%{color: greenyellow;}
+    66%{color: red;}
+    to{color: blue;}
+}
+
+.nav-logo .menu{
+    padding-top: 18px;
+}
+
+.menu-item a{
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.icons li a{
+    transition: all 0.3s ease;
+}
+
+.icons li a:hover{
+    color: #FBC500 !important;
+}
+
+@media screen and (max-width: 1000px){
+	.sm-hidden{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px){
+    .nav-logo{
+        min-width: 360px !important;
+    }
+    .logo-name > span{
+		font-size: 1.3rem;
+	}
+    .logo-name{
+        padding-top: 0px;
+    }
+
+    .nav-logo{
+        height: 60px;
+    }
+}

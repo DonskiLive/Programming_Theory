@@ -1,0 +1,22 @@
+:root {
+    --bg-head-: rgb(252, 219, 0);
+    --bg-foot: rgb(1,1,1);
+    --bg-white: white;
+    --fs-30: 30px;
+    --fs-22: 22px;
+    --fs-32: 32px;
+    --fs-20: 20px;
+    --fs-16: 16px;
+    --fw-42: 42px;
+    --fw-50: 50px;
+    --fc-logo: rgb(252, 219, 0);
+    --fc-dark: rgb(1,1,1);
+    --fc-head-tesis: rgb(49, 56, 64);
+    --fc-text: rgb(85, 85, 85);
+    --fc-decs: rgb(137, 137, 137);
+    --fc-white: rgb(255,255,255);
+    --f-family-regular: PTSans-Regular, serif;
+    --f-family-bold: PTSans-Bold, serif;
+    --f-family-italic: PTSans-Italic, serif;
+    --family-bold-italic: PTSans-BoldItalic, serif;
+}

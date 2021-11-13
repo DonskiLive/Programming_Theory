@@ -1,0 +1,147 @@
+html, body{
+    font-family: Montserrat, sans-serif;
+}
+
+ul, li{
+    display: block;
+}
+
+/* Header */
+
+#header{
+    background-color: rgb(184, 248, 184);
+}
+
+h1{
+    font-weight: 600;
+}
+
+
+.cards-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: repeat(2, 1fr);
+    gap:3em
+}
+
+
+.card1{
+    position: relative;
+    background: url("../img/kids_jump.jpg") no-repeat;
+    background-size: cover;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    transition: background-color 0.5s ease;  
+}
+
+.hidden1{
+    position: absolute;
+    visibility:hidden;
+    color: red;
+    text-transform: uppercase;
+    font-size: 72px;
+    text-align: center;
+    top: 200px;
+    left: 100px;
+}
+
+.card2{
+    background: url("../img/camp.jpg") no-repeat;
+    background-size: cover;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.card3{
+    background: url("../img/happy_kids.jpg") no-repeat;
+    background-size: cover;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.card4{
+    position: relative;
+    background: url("../img/kids_on_scate.jpg") no-repeat;
+    background-size: cover;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    grid-column: 3/4;
+    grid-row: 1/3;
+    transition: background-color 0.5s ease; 
+}
+
+.hidden2{
+    position: absolute;
+    visibility:hidden;
+    color: red;
+    text-transform: uppercase;
+    font-size: 72px;
+    text-align: center;
+    top: 200px;
+    left: 80px;
+}
+
+.card1:hover, .card4:hover{
+    background-color: #ffc107;
+    opacity: 0.2;
+}
+
+.card1:hover .hidden1{
+    visibility: visible;
+    transition: 0.5s ease;
+}
+
+.card4:hover .hidden2{
+    visibility: visible;
+    transition: 0.5s ease;
+}
+
+/* Presentation */
+
+h5{
+    color: #ffc107;
+    font-weight: 400;
+}
+
+.text-muted{
+    font-style: italic;
+}
+
+/* Gallery */
+
+#gallery{
+    height: 75vh;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(50px auto);
+    gap: 1rem;
+    justify-content: center;
+    align-items: end;
+}
+
+.box img{
+    transition: transform 0,5s ease;
+}
+
+.box img:hover{
+    transform: scale(1.5);
+}
+
+/* Contacts */
+
+footer{
+    background-color: rgb(184, 248, 184);
+}

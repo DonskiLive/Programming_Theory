@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Travel blog</title>
+</head>
+
+<body>
+    <div class="main">
+        <header id="header">
+            <!-- Navigation section start -->
+            <nav class="navbar navbar-light justify-content-between bg-info">
+                <div class="container-fluid">
+                    <span class="navbar-brand mb-0 ps-3 h1 text-uppercase">travel blog</span>
+                    <div id="menuToggle">
+                        <input type="checkbox">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <li><a href="#portugal">Portugal</a></li>
+                            <li><a href="#">Europe</a></li>
+                            <li><a href="#">The mountains</a></li>
+                            <li><a href="#questions">Your questions</a></li>
+                        </ul>
+                    </div>   
+                </div>
+            </nav>
+            <!-- Navigation section end -->
+            <!-- Main-container section-->
+            <section class="container  position-relative" id="main-container">
+                <div class="title">
+                    <h1>Best Plases<br> to  Visit in Europe...</h1>
+                </div>
+                <div class="text">
+                    <p>Whilst the famous cities of London and Paris never really loose the crowds, here are a few trade-offs I am sure you will
+                    fall in love that are (nearly) free from selfie stick attacks and queues long enough to be a flight time during the
+                    offseason</p>
+                </div>
+                <div class="main-foto d-flex ms-auto">
+                </div>
+            </section>
+            <!-- Main-container section end  -->
+            <!-- Portugal section start -->
+            <section id="portugal" class="container">
+                <a name="portugal"></a>
+                <div class="row mx-auto py-5">
+                    <div class="gallery">
+                        <div class="img01"></div>
+                        <div class="gallery-text ps-5 d-flex justify-content-center flex-column">
+                            <h2 class="text-start display-6 fw-bold">The Algarve, Portugal</h2>
+                            <p class="py-4">While there is no denying that winter sea swimming is reserved for the fearless, there is still some good surf
+                            and sun-kissed days to be had. With over 300 sunny days a year and heavily discounted prices outside summer, the
+                            off-season in the Algarve is a good gamble to get your winter Vitamin C.</p>
+                            <a class="link-info" href="https://en.wikipedia.org/wiki/Algarve" target="_blank">read more</a>
+                        </div>
+                        <div class="img02"></div>
+                        <div class="img03"></div>
+                        <div class="img04"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Portugal section end -->
+            <!-- Questions form -->
+            <section id="contact"class="container">
+                <a name="questions"></a>
+                <div class="row col-8 mx-auto">
+                    <h3 class="display-6 fw-bold text-center mb-5">Do you have questions? <br> Write to me!</h3>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                    </div>
+                </div>
+            </section>
+            <!-- Questions form end -->
+            <!-- footer -->
+            <footer class="footer container-fluid bg-info text-center py-2">
+                <p> &copy; | Abashkina</p>
+
+            </footer>
+
+        
+
+        </header>
+    </div>
+    
+        
+    
+</body>
+</html>

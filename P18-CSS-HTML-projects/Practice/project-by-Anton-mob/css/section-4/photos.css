@@ -1,0 +1,129 @@
+.photos-title {
+	text-shadow: 2px 2px rgba(8, 8, 8, 0.466);
+	margin-bottom: 10px;
+	font-family: 'Lobster', cursive, serif;
+	font-size: 70px;
+	text-align: center;
+	position: relative;
+	opacity: 1;
+}
+
+#grid {
+	display: grid;
+	width: 90vw;
+	margin: 0 auto;
+	grid-template-columns: 1fr 1fr 1fr;
+	height: 250px;
+}
+
+.photo-1 {
+	opacity: 0.8;
+	height: 350px;
+	background: url(./../../img/photo-2.jpg) no-repeat center;
+	background-size: cover;
+	position: relative;
+	left: 10vw;
+	top: 0px;
+	z-index: 3;
+	border: 3px solid #FBC500;
+	border-radius: 15px;
+	box-shadow: 1px 1px 10px rgb(0, 0, 0);
+	transition: all 0.3s linear;
+	
+}
+
+.photo-1:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+	z-index: 10;
+	opacity: 1;
+	border: 3px solid #FBC500;
+}
+
+.photo-2 {
+	opacity: 0.5;
+	background: url(./../../img/photo-1.jpg) no-repeat center;
+	background-size: cover;
+	position: relative;
+	left: -5vw;
+	top: 20vh;
+	z-index: 1;
+	border: 1px solid #FBC500;
+	border-radius: 15px;
+	box-shadow: 1px 1px 10px rgb(0, 0, 0);
+	transition: all 0.3s linear;
+}
+
+.photo-2:hover{
+	opacity: 1;
+	transform: scale(1.1);
+	cursor: pointer;
+	z-index: 10;
+	border: 3px solid #FBC500;
+}
+
+.photo-3 {
+	opacity: 0.5;
+	background: url(./../../img/photo-3.jpg) no-repeat center;
+	background-size: cover;
+	position: relative;
+	left: -12vw;
+	top: 5vh;
+	z-index: 2;
+	border: 1px solid #FBC500;
+	border-radius: 15px;
+	box-shadow: 1px 1px 10px rgb(0, 0, 0);
+	transition: all 0.3s linear;
+}
+
+.photo-3:hover{
+	opacity: 1;
+	transform: scale(1.1);
+	cursor: pointer;
+	z-index: 10;
+	border: 3px solid #FBC500;
+}
+
+#grid > div {
+	padding: 20px;
+	font-size: 4vw;
+	color: white;
+}
+
+
+@media (max-width: 1000px) {
+	.photos-title {
+		font-size: 50px;
+	}
+
+	#grid {
+		grid-template-columns: 1fr 1fr
+	}
+
+	.photo-3{
+		display: none;
+	}
+}
+
+@media (max-width: 650px) {
+	.photos-title {
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 500px) {
+	#grid {
+		display: grid;
+		width: 100vw;
+		height: 260px;
+	}
+	.photo-1:hover{
+		transform: scale(1.05);
+	}
+	.photo-2:hover{
+		transform: scale(1.05);
+	}
+	.photo-2 {
+		top: 15vh;
+	}
+}

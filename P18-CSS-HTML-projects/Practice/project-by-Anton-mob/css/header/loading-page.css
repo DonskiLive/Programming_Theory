@@ -1,0 +1,91 @@
+
+.loading {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FBC500;
+    animation: load 3s ease-in-out forwards;
+}
+
+.loader {
+	margin-top: -140px;
+    max-width: 15rem;
+    width: 100%;
+    height: auto;
+    stroke-linecap: round;
+}
+
+circle {
+    fill: none;
+    stroke-width: 3;
+    animation-name: preloader;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    transform-origin: 170px 170px;
+    will-change: transform;
+}
+
+circle:nth-of-type(1) {
+    stroke-dasharray: 550px;
+}
+
+circle:nth-of-type(2) {
+    stroke-dasharray: 500px;
+}
+
+circle:nth-of-type(3) {
+    stroke-dasharray: 450px;
+}
+
+circle:nth-of-type(4) {
+    stroke-dasharray: 300px;
+}
+
+circle:nth-of-type(1) {
+    animation-delay: -0.15s;
+}
+
+circle:nth-of-type(2) {
+    animation-delay: -0.3s;
+}
+
+circle:nth-of-type(3) {
+    animation-delay: -0.45s;
+}
+
+circle:nth-of-type(4) {
+    animation-delay: -0.6s;
+}
+
+@keyframes preloader {
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load {
+    from {
+        opacity: 1;
+        z-index: 20;
+    }
+
+    to {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .loading {
+        width: 100%;
+        min-width: 400px;
+        height: 100vh;
+        background-color: #FBC500;
+        animation: load 3s ease-in-out forwards;
+    }
+}

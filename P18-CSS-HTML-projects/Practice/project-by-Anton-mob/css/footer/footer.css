@@ -1,0 +1,11 @@
+#footer{
+	background-color: black;
+}
+
+#footer img{
+	width: 100px;
+}
+
+#footer i{
+	cursor: pointer;
+}

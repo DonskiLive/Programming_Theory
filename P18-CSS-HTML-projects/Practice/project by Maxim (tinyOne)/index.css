@@ -1,0 +1,25 @@
+@import './node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+@import './node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import "./node_modules/font-awesome/css/font-awesome.min.css";
+
+/* fonts */
+@import "./css/fonts.css";
+
+/* global style variables*/
+@import './css/variables.css';
+
+/* global styles */
+@import "./css/style.css";
+
+/* header styles*/
+@import "./css/header/header.css";
+@import "./css/header/media_header.css";
+
+/* section styles */
+@import './css/section/section.css';
+@import "./css/section/media_section.css";
+
+/* footer styles */
+@import './css/footer/footer.css';
+@import "./css/footer/media_footer.css";

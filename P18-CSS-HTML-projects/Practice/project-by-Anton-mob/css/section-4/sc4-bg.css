@@ -1,0 +1,62 @@
+#section-4 {
+	padding: 80px 0px 300px 0px;
+	color: #FBC500;
+	overflow: hidden;
+	position: relative;
+}
+
+  /* VIDEO */
+.video {
+	top: 62%;
+	width: 1938px;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	left: 50%;
+	z-index: 0;
+	position: absolute;
+}
+
+.photos-header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 110px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background: url(https://denis-creative.com/wp-content/uploads/2018/01/about-header-bg.png)
+	0 top no-repeat;
+}
+
+.photos-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 126px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background: url(https://denis-creative.com/wp-content/uploads/2018/01/about-footer-bg.png)
+	0 top no-repeat;
+}
+.photos-header-bg-2 {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	z-index: 1;
+	transform: translate(-50%, -100%);
+	transition: transform 0.9s 0.2s ease;
+	will-change: transform;
+	transform: translate(-50%, 0);
+}
+
+
+@media (max-width: 500px) {
+	.video {
+		top: 67%;
+		width: 1200px;
+		transform: translate(-50%, -50%);
+		opacity: 1;
+		left: 40%;
+		z-index: 0;
+		position: absolute;
+	}
+}

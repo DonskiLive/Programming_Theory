@@ -1,0 +1,73 @@
+@import "./animation-section.css"; /*animation for section*/
+
+#section {
+    height: 100vh;
+    padding-top: 110px;
+    margin-bottom: 110px;
+}
+
+#section h1 {
+    opacity: 0;
+    font-family: PTSans-Family, sans-serif;
+    font-size: var(--fs-32);
+    text-align: center;
+    line-height: 32px;
+    color: var(--fc-dark);
+    font-weight: 700;
+    animation: visible 0.3s 6s ease-in-out forwards;
+}
+
+#section h3 {
+    opacity: 0;
+    font-family: PTSans-Family, sans-serif;
+    font-size: var(--fs-20);
+    line-height: 24px;
+    color: var(--fc-head-tesis);
+    font-weight: 400;
+    text-align: center;
+    margin-top: 30px;
+    animation: visible 0.3s 6.3s ease-in-out forwards;
+}
+
+#section .margin-y {
+    padding-bottom: 100px;
+}
+
+#section .box-item {
+    opacity: 0;
+    margin-top: 100px;
+    padding: 0 5px;
+}
+
+#section .box-item:nth-child(odd) {
+    animation: visible 0.3s 6.6s ease-in-out forwards;
+}
+
+#section .box-item:nth-child(even) {
+    animation: visible 0.3s 6.9s ease-in-out forwards;
+}
+
+#section h4 {
+    display: inline-block;
+    font-size: var(--fs-22);
+    line-height: 24px;
+    color: var(--fc-dark);
+    font-weight: 400;
+    font-family: PTSans-Family, sans-serif;
+    transition: font-size 0.5s;
+}
+
+#section h4:hover {
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#section p{
+    font-size: var(--fs-16);
+    line-height: 20px;
+    color: rgb(137, 137, 137);
+    font-weight: 400;
+    font-family: PTSans-Family, sans-serif;
+    margin-top: 20px;
+}
