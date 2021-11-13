@@ -1,0 +1,84 @@
+*{
+    font-style: italic;
+}
+/* *****Section1******** */
+/* body */
+
+#my-body{
+    background-color: rgba(0, 255, 255, 0.139);
+    color: black;
+    font-family: Roboto, sans-serif !important;
+}
+
+body.bd{
+    background-color: azure;
+}
+
+p {
+    text-align: center !important;
+}
+
+.simple-text{
+    font-style: normal;
+    color: blue;
+}
+
+.bold-text{
+    font-weight: bold;
+}
+
+#last{
+    font-size: 24px;
+}
+
+.news article h2{
+    font-size: 32px;
+}
+
+h1, h2{
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+
+.text{
+    font-family: Roboto, sans-serif !important;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.text{
+    font: italic bold 20px 'Times New Roman', serif;
+}
+
+.text{
+    text-align: left !important;
+    line-height: 2;
+}
+
+.wavy{
+    text-decoration: underline wavy red;
+}
+
+.box {
+    width: 600px;
+    height: 600px;
+   /*  background-color: aquamarine;
+    background-image: url(./../../03-27_05-HTML-Form/klipartz.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover; */
+    background: aquamarine url(./../../03-27_05-HTML-Form/klipartz.png) no-repeat 20% 50%;
+    background-size: 20%;
+}
+
+.box1{
+    width: 100px;
+    height: 100px;
+    background-image: url(./../../03-27_05-HTML-Form/klipartz.png);
+    background-color: rgba(127, 255, 212, 0.5);
+    background-size: cover;
+    border-radius: 50%;
+    border:5px solid blue
+
+}
