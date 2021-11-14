@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Create film list</title>
+	<link rel="stylesheet" href="./../css/style.css">
+</head>
+
+<body>
+
+	<div class="content">
+		<div class="header">
+			<a href="./index.html">Home</a>
+			<a href="./guess.html">Guess the number</a>
+			<a href="#">Create film list</a>
+			<a href="./guess-word.html">Check the word</a>
+
+		</div>
+		<div class="center">
+			<div id="grid-container">
+				<div class="element name">Create film list</div>
+				<input type="text" maxlength="25" class="element input-text" placeholder="Enter name of Film">
+				<button class="element add-btn film-btn"
+					title="Click to add film into list">Add film</button>
+					<button class="element clean-btn film-btn"
+					title="Click to clean the list">Clean up</button>
+				<ul id="films"></ul>
+			</div>
+			
+		</div>
+	</div>
+
+	<script src="./../js/film-list.js"></script>
+</body>
+
+</html>
