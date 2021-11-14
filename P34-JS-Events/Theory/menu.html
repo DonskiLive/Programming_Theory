@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            transition: all 1s ease;
+        }
+
+        .main-nav {
+            position: fixed;
+            top: 0;
+            left: -200px;
+            _opacity: 0.3;
+            background-color: gray;
+            color: white;
+            padding: 30px;
+            list-style: none;
+            width: 200px;
+            height: 100vh;
+            transition: all 1s ease;
+        }
+
+        #show-menu {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .wrapper{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .show{
+            _display: block;
+            _opacity: 1;
+            _position: fixed;
+            left: 0;
+        }
+
+        .ml-200{
+            margin-left: 200px;
+            transition: all 1s ease;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <button id="show-menu">Menu</button>
+    <div class="wrapper">
+        <h1>Menu example</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum a expedita iure, provident facilis molestiae
+            maiores excepturi illo magni iste.</p>
+    </div>
+    <ul class="main-nav">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+    <script src="./menu.js"></script>
+</body>
+
+</html>

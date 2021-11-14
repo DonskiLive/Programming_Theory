@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        .one {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin-top: 10px;
+            display: inline-block;
+            transition: all 1s ease;
+        }
+
+        .two {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin-top: 10px;
+            display: inline-block;
+            transition: all 1s ease;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .fs-30 {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Events</h1>
+    <!--  <button id = 'btn' onclick="simpleClick()">click me</button> -->
+    <button id='btn'>click me</button>
+    <div class="one yellow"></div>
+    <div class="two"></div>
+    <div class="one" id="three"></div>
+
+    <div class="wrapper">
+        <p class="topText">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, et. Quas, facilis alias quis suscipit vel
+            debitis porro nostrum ducimus.
+        </p>
+        <button id="size30">change size</button>
+    </div>
+
+    <h2>Input</h2>
+    <p>
+        <input type="text" id="firstName" placeholder="first name">
+    </p>
+    <p>
+        <input type="text" id="lastName" placeholder="last name">
+    </p>
+    <button id="send">send</button>
+    <p id = "output"></p>
+
+    <h2>On change</h2>
+    <p>Select a new car</p>
+    <select name="" id="mySelect">
+        <option value = "nothing selected"></option>
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Volvo">Volvo</option>
+        <option value="Nissan">Nissan</option>
+    </select>
+    <p id = "carName"></p>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
