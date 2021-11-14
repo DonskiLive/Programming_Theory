@@ -1,0 +1,180 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+    background: linear-gradient(
+		180deg,
+		rgba(240, 240, 240) 10%,
+		rgba(243, 243, 243, 0.849) 100%), url(./img/bg-contacts.jpg) center no-repeat fixed;
+    background-size: cover;
+}
+
+.wrapper{
+	width: 90vw;
+	margin: 0 auto;
+	padding-top: 10px;
+	min-width: 1000px;
+}
+.container{
+	display: flex;
+	justify-content: space-between;
+}
+.left, .right{
+	width: 48%;
+}
+
+.header-text{
+	font-family: 'Rampart One';
+	font-size: 45px	;
+	text-align: center;
+}
+
+.right{
+	height: 540px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	overflow: scroll;
+}
+
+.card{
+	position: relative;
+	width: 300px;
+	text-align: center;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	height: 250px;
+	background: url(./img/bg-cont.png);
+}
+
+.con-name{
+	font-family: 'Rampart One';
+	margin-top: 50px;
+	margin-bottom: 0;
+	font-size: 25px;
+	padding: 0 15px 0 10px;
+}
+
+.con-data{
+	font-size: 20px;
+	margin: 0;
+	padding: 15px 15px 0 10px;
+}
+
+.con-remove{
+	position: absolute;
+	bottom: 22px;
+	left: 15px;
+	font-size: 15px;
+	color: white;
+	background-color: rgb(138, 0, 0);
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-control{
+    padding: 10px;
+    border: 1px solid green;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.form-control:focus{
+    outline: none;
+    box-shadow: 0 0 4px 0 #00b100;
+    border: 2px solid #00b100;
+}
+
+.form-control::placeholder{
+    font-size: 0.8rem;
+    font-family: inherit;
+}
+
+.is-invalid{
+    border-color: #dc3545;
+}
+
+.is-invalid:focus{
+    outline: none;
+    box-shadow: 0 0 4px 0 #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.alert-success{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+
+form{
+    width: 500px;
+    margin: 0 auto 0;
+    display: flex;
+    flex-direction: column;
+}
+
+form .buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.add-btn{
+	margin-top: 8px;
+	height: 40px;
+    border: 1px solid green;
+    background-color: rgba(0, 128, 0, 0.68);
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: inherit;
+    outline: none;
+	transition: all 1s ease;
+}
+
+.add-btn:hover{
+    cursor: pointer;
+    background-color: #006a00;
+}
+
+.userInput-warning{
+	border: 1px solid red;
+	background-color: rgba(255, 0, 0, 0.1);
+    box-shadow: 0px 0px 4px #dc3545;
+}
+
+.message{
+	border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    height: 45px;
+    width: 500px;
+    transition: all 1s ease;
+    cursor:auto;
+}

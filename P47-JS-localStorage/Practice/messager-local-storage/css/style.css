@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(
+		180deg,
+		rgba(240, 240, 240) 20%,
+		rgba(243, 243, 243, 0.849) 100%), url(./img/bg-comments.jpg) center no-repeat fixed;
+    background-size: cover;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-right, .container-left {
+    margin-top: 20px;
+    height: 300px;
+    border-radius: 10px;
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.2);
+    overflow: scroll;
+    box-shadow: 0 5px 20px rgb(0, 0, 0);
+    display: none;
+}
+
+.left{
+    cursor: pointer;
+    transition: all 1s ease;
+    padding: 10px;
+}
+
+.right{
+    padding: 10px;
+}
+
+.message{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.message-bg{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    transition: all 1s ease;
+    box-shadow: 0 2px 5px rgba(85, 85, 85, 0.801);
+}
+
+.message-bg:hover{
+    background-color: rgba(153, 205, 50, 0.3);
+    box-shadow: 0 5px 10px rgba(85, 85, 85, 0.801);
+}
+
+.message h4{
+    margin-right: 10px;
+}
+
+.comment{
+    margin: 0;
+    
+}
+
+.comment p{
+    font-size: 12px;
+    margin-top: 5px;
+    border-bottom: 1px solid black;
+}
+
+.comment h5{
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+.user-name{
+    padding: 5px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.349)
+}
+
+.user-name:hover{
+    background-color: rgba(153, 205, 50, 0.3);
+    box-shadow: 0 5px 10px rgba(85, 85, 85, 0.801);
+}
+
+.container-message, .container-comment {
+    margin-top: 20px;
+    height: 150px;
+    border-radius: 10px;
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 20px rgb(0, 0, 0);
+    display: none;
+}
+
+.write-text{
+    font-size: 16px;
+    margin: 5px auto 5px auto;
+    width: 90%;
+    height: 50px;
+}
+
+#message-title{
+    text-align: center;
+    font-size: 16px;
+    margin: 10px auto 5px auto;
+    width: 90%;
+    height: 30px;
+}
+
+#comFromUserName{
+    text-align: center;
+    font-size: 16px;
+    margin: 10px auto 5px auto;
+    width: 90%;
+    height: 30px;
+}
+
+.add-btn{
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: rgba(153, 205, 50, 0.3);
+    cursor: pointer;
+}
+
+.add-btn:hover{
+    background-color: rgba(153, 205, 50, 0.8);
+}
+
+.modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(255, 180, 180, 0.178);
+    backdrop-filter: blur(1px);
+    /* filter: blur(1.5rem); */
+}
+
+.modal-dialog{
+    border-radius: 10px;
+    height: 200px;
+	width: 500px;
+	position: relative;
+	margin: 30vh auto;
+	padding: center;
+	text-align: center;
+	background-color: whitesmoke;
+    box-shadow: 0 0 20px rgb(255, 0, 0), inset 0 0 5px red;
+}
+
+.modal-close{
+	position: absolute;
+	top: 8px;
+	right: 14px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.modal-text{
+    padding-top: 50px;
+    line-height: 40px;
+}

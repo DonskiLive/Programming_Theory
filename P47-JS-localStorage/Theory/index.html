@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context</title>
+    <style>
+        .wrapper{
+            width: 600px;
+            margin: 30px auto;
+        }
+        .timer{
+            text-align: center;
+        }
+        #timerInput{
+            display: block;
+            margin:20px auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="timer">
+            <h2>Timer</h2>
+            <button id="startBtn">start</button>
+            <button id="stopBtn">stop</button>
+            <input type="number" id="timerInput" min = "0">
+            <h3 id="result"></h3>
+        </div>
+    </div>
+    <script src="./timer.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
