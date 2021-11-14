@@ -1,0 +1,40 @@
+.app{
+	padding-top: 20px;
+}
+.wrapper {
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color:rgba(100, 148, 237, 0.2);
+	width: fit-content;
+	margin: 0 auto;
+	text-align: center;
+}
+#userInput{
+	margin: 0 20px 20px 20px;
+	padding: 5px;
+	width: 200px;
+	text-align: center;
+}
+
+.btn{
+	width: 80px;
+	height: 40px;
+	border-radius: 5px;
+	color: white;
+	font-size: 16px;
+	transition: all 1s ease;
+	margin: 0 5px 0 5px;
+	cursor: pointer;
+}
+
+#startBtn{
+	background-color: blue;
+}
+#stopBtn{
+	background-color: red;
+}
+
+.element-disabled{
+	cursor: no-drop;
+	opacity: 0.5;
+}
