@@ -1,0 +1,17 @@
+{
+  "name": "phone-book-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build" : "webpack --mode production",
+    "dev" : "webpack --mode development"
+  },
+  "keywords": [],
+  "author": "Elena Sitar",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
