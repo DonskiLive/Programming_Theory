@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 40</title>
+    <script src="./main.js" defer></script>
+    <style>
+        .wrapper{
+            width: 800px;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        section{
+            display: flex;
+            justify-content: space-between;
+        }
+        .left, .right{
+            width:45%;
+        }
+        form{
+            text-align: right;
+            width: fit-content;
+            margin: 0 auto;
+        }
+        input{
+            margin-bottom: 20px;
+        }
+        .avatar{
+            margin: 0 auto;
+            border-radius: 50%;
+            background-color: yellowgreen;
+            width: 50px;
+            height: 50px;
+        }
+        ul{
+            list-style: none;
+            
+        }
+        li{
+            border-bottom: 1px yellowgreen solid;
+        }
+        .right{
+            text-align: center;
+            position: relative;
+        }
+        .user-wrapper{
+            position: absolute;
+            width: 100%;
+            left: 900px;
+            transition: all 1s ease;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#" id='usersForm'>
+            <label for="name">Name</label>
+            <input type="text" id='name' placeholder="enter your name">
+            <br>
+            <label for="lastname">Last name</label>
+            <input type="text" id='lastName' placeholder="enter your lastname">
+            <br>
+            <label for="age">Age</label>
+            <input type="number" id='age' placeholder="enter your age">
+            <br>
+            <label for="city">City</label>
+            <input type="text" id='city' placeholder="enter your city">
+            <br>
+            <label for="email">E-Mail</label>
+            <input type="email" id='email' placeholder="enter your e-mail">
+            <br>
+            <label for="phone">Phone</label>
+            <input type="tel" id='phone' placeholder="enter your phone number">
+            <br>
+            <button type="submit" name="submit" id="submit">Send</button>
+        </form>
+        <hr>
+        <section id='content'>
+            <div class="left">
+                <ul id='users'>
+                    <!-- <li>
+                        <h4>Name: Vasya Ivanov</h4>
+                        <p>City: Berlin</p>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="right">
+               <!--  <div class="avatar">
+                </div>
+                <h3>Name: Vasya Last name: Ivanov</h3>
+                <p>Age: 34</p>
+                <p>City: Berlin</p>
+                <p>E-MAil: vasya@gmail.com</p>
+                <p>phone: +49123456789</p> -->
+            </div>
+            
+        </section>
+    </div>
+    
+</body>
+</html>
