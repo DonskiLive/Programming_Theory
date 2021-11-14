@@ -1,0 +1,35 @@
+header{
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+	background-color: #6696ff7c;
+	box-shadow: 0 2px 5px #6696ff7c;
+	font-size: 25px;
+}
+#container {
+	background-color: rgba(25, 0, 255, 0.05);
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	width: 80vw;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px #6696ff7c;
+}
+
+.box {
+	width: calc(20% - 20px);
+	height: 150px;
+	margin: 5px;
+	transition: all 0.5s ease;
+	border-radius: 10px;
+}
+
+.box:hover{
+	transform: scale(1.1);
+	box-shadow: 0 5px 10px #000000ab;
+}
+
+.round-shape{
+	border-radius: 50%;
+}
