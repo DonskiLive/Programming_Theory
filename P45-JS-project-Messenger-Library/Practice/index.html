@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="./library.js" defer></script>
+    <script src="./script.js" defer></script>
+    <style>
+        .wrapper{
+            width: 800px;
+            margin: 0 auto;
+            padding-top: 30px;
+            text-align: center;
+        }
+        section{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #left, #right{
+            _border: 1px solid black;
+            width: 45%;
+            height: 500px;
+        }
+        .book{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .book:hover{
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Library</h2>
+        <section>
+            <div id="left">
+
+            </div>
+            <div id="right">
+            
+            </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
