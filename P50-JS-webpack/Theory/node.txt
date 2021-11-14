@@ -1,0 +1,120 @@
+node -v (version)
+
+node (start node js)
+
+node -name of js file (...js) - to start code inside node js terminal.
+
+ctr+c + ctr+c
+
+npm init (node js packet manager - start inside directory of project) -y (to confirm all with Enter)
+Enter ... Enter ... 
+package.json - will be created inside project directory - created file you can modify later
+{
+  "name": "project-messanger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js", - (here must stay main js file - but that is not very important)
+  "scripts": {
+	"build": "webpack" - (write, we will need that comand later to collect pack)
+    #"test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anton",
+  "license": "ISC"
+}
+
+npm install (possible without this command)
+
+npm install webpack webpack-cli (npm i webpack webpack-cli)
+
+package.json will change:
+{
+  "name": "project-messanger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Anton",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
+
+new file package-lock.json - will be created (this file you must not touch!)
+additionaly folder node_modules - will be created (that is library of packages)
+
+If you recieve project without node_modules folder (which is take a lot of space)
+you can write command npm install (or npm i) to download all important library of packages (folder node_modules will be created)
+
+Create inside project directory create file: webpack.config.js
+inside file copy:
+const path = require('path'); (absolute way to folder will be pointed by path inside this folder)
+module.exports = {
+mode: 'development', (here we must write mode development ofr production)
+	entry: './src/index.js', (select correct way to main js file, which must be located inside folder "src")
+	output: {
+		path: path.resolve(__dirname, 'dist'), (dist -name of folder where all files after packing will be stored)
+		filename: 'bundle.js', (new main js file, which will be created after packing)
+	},
+};
+
+after all write comand: npm run build
+
+folder dist - inside main dirrectory will be created with file bundle.js
+in case of mode: 'development' file bundle.js will have some attantions and will look different
+in case of mode: 'production' or without mode - file bundle.js will be more clean and readable
+if you change something inside sattings of module.exports - after change you have to run 'npm run build' to rebuild package
+
+
+Now possible to connect created bundle.js file to html file and remove all connections to old js files.
+But before starting html - make sure that all js.files connected beetween each other. If needed use:
+export function findUserById(id){ --- import {findUserById} from './index.js'
+export default class User { // if we export file with only one class (default) possible create class without name - "export default class{}"
+--- import User from './user.js' // import User from './user' = for import of default export - you can also change given name of imported class, for example newUser instead of User, but control names of used class below
+
+
+    const userId = +form.button.dataset.user // +form.button.dataset.user - button обращение по имени к button (name = 'button')
+
+
+
+package.json:
+{
+  "name": "project-messanger",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production", - from now possible to run in production mode by comand: npm run build
+    "dev": "webpack --mode development" - from now possible to run in development mode by comand: npm run dev
+  },
+  "author": "Anton",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
+
+In that case we dont need mode: 'development' in webpach.config.js
+module.exports = {
+	// mode: 'development',
+	entry: './src/js/index.js',
+	output: {
+		path: path.resolve(__dirname, 'dist'),
+		filename: 'bundle.js',
+	},
+};
+
+
+const URL = 'http//google.com' // !export default const URL = 'http//google.com' - так не работает - пишем внизу - export default URL
+export default URL
+
+// export{users, messages} - возможен синтаксис, тогда не нужно прописывать перед каждой const
+import {users, messages} from './data'
+
+
+
+//import {print as myPrint} from './path' - if we want change name for imported element without defaul mark - you can rename it following: {print as myPrint} now new name "print" changed old "myPrint"
