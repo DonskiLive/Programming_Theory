@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Remove Duplicates from Array</title>
+</head>
+
+<body>
+	<script>
+
+		const array = ['Alex', 'Anton', 'Mark', 'Anton', 'Melisa', 'Anton']
+		const uniqArray = [...new Set(array)]
+		const uniqArray2 = Array.from(new Set(array))
+		console.log(uniqArray)
+		console.log(uniqArray2)
+
+		const uniqArray3 = array.filter((item, index) => {
+			return index === array.indexOf(item)
+		})
+		console.log(uniqArray3)
+
+		const uniqArray4 = array.reduce((uniq, item) => {
+			return uniq.includes(item) ? uniq : [...uniq, item];
+		}, [])
+		console.log(uniqArray4)
+
+	</script>
+</body>
+
+</html>
