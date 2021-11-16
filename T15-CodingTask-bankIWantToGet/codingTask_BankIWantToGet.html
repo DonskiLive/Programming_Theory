@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bank - I want to get</title>
+</head>
+
+<body>
+	<script>
+		function iWantToGet(amountRequired) {
+			const availableNotes = [100, 50, 20, 10];
+			const result = [];
+
+			if (amountRequired > 0) {
+				for (let i = 0; i < availableNotes.length; i++) {
+					let note = availableNotes[i]
+					while (amountRequired - note >= 0) {
+						amountRequired -= note
+						result.push(note)
+					}
+				}
+			} else {
+				console.log('Pls new amount')
+			}
+			if (amountRequired !== 0) {
+				console.log('not given: ', (amountRequired))
+			}
+			return result;
+		}
+		console.log(iWantToGet(280))
+	</script>
+</body>
+
+</html>
