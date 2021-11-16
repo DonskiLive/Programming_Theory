@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fibonacci numbers from 0 each new number that is sum of two previos numbers</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<script>
+		function fibonacci(num){
+			const result = [0, 1]
+			for(let i=2; i<=num; i++){
+				const prevNum1 = result[i-1]
+				const prevNum2 = result[i-2]
+				result.push(prevNum1 + prevNum2)
+			}
+			return result[result.length-1]
+		}
+		console.log(fibonacci(7)) // 13
+
+		function fibonacciShort(num){
+			let a=1, b=1
+			for(let i=3; i<=num; i++){
+				let c = a + b;
+				[a, b] = [b, c]
+				console.log(b)
+			}
+			return b
+		}
+		console.log(fibonacciShort(7)) // 2,3,5,8,13
+
+		function fibonacci2(num){
+			if(num<2){
+				return num
+			}
+			return fibonacci2(num-1)+fibonacci2(num-2)
+		}
+		console.log(fibonacci2(7)) // recursion
+	</script>
+</body>
+</html>
