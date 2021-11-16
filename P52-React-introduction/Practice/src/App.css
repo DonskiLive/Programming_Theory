@@ -1,0 +1,143 @@
+body {
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  min-width: 1350px;
+}
+.mainPageSection {
+  position: relative;
+  height: 100vh - 70px;
+  min-height: 700px;
+  background-color: #fefefe;
+}
+.navMainPage {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background-color: #06b2bb;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.navMainPage .navContainer {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navMainPage .navContainer .logo {
+  padding-top: 10px;
+  cursor: pointer;
+}
+.navMainPage .navContainer .btnSignInMainPage {
+  font-family: 'Montserrat', sans-serif;
+  color: snow;
+  border: 1px solid snow;
+  border-radius: 17px;
+  background-color: #06b2bb;
+  width: 112px;
+  height: 34px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.navMainPage .navContainer .btnSignInMainPage:hover {
+  background-color: #ffd219;
+  border: 1px solid #ffd219;
+  font-weight: 500;
+  color: #393939;
+}
+.mainPageContainer {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.mainPageContainer .mainLeftContainer, .mainPageContainer .mainRightContainer {
+  width: 45%;
+  height: calc(100% - 70px);
+}
+.mainPageContainer .mainLeftContainer h1 {
+  font-size: 56px;
+  margin: 100px 0 30px 0;
+  font-weight: 500;
+}
+.mainPageContainer .mainLeftContainer h1 span {
+  color: #06b2bb;
+}
+.mainPageContainer .mainLeftContainer .btnContainer {
+  position: absolute;
+  left: 0;
+}
+.mainPageContainer .mainLeftContainer .btnContainer .btnLost {
+  display: block;
+  height: 93px;
+  border: none;
+  border-radius: 0 46.5px 46.5px 0;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  background-color: #fa5456;
+  width: 544px;
+  cursor: pointer;
+}
+.mainPageContainer .mainLeftContainer .btnContainer .btnLost h3 {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 10vw;
+  margin: 0;
+}
+.mainPageContainer .mainLeftContainer .btnContainer .btnLost:hover {
+  background-color: #ffd219;
+}
+.mainPageContainer .mainLeftContainer .btnContainer .btnLost img {
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+}
+.mainPageContainer .mainLeftContainer .btnContainer .btnFound {
+  display: block;
+  height: 93px;
+  border: none;
+  border-radius: 0 46.5px 46.5px 0;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  background-color: #06b2bb;
+  width: 470px;
+  cursor: pointer;
+}
+.mainPageContainer .mainLeftContainer .btnContainer .btnFound h3 {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 10vw;
+  margin: 0;
+}
+.mainPageContainer .mainLeftContainer .btnContainer .btnFound h3 {
+  color: snow;
+}
+.mainPageContainer .mainLeftContainer .mainPageJoinLink {
+  position: absolute;
+  bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.mainPageContainer .mainLeftContainer .mainPageJoinLink a {
+  color: #06b2bb;
+  font-weight: 700;
+  cursor: pointer;
+}
+.mainPageContainer .mainRightContainer {
+  text-align: right;
+}
+.mainPageContainer .mainRightContainer img {
+  height: 100%;
+}
+@media screen and (max-width: 1300px) {
+  .btnContainer h3 {
+    padding-left: 130px !important;
+ }
+}
