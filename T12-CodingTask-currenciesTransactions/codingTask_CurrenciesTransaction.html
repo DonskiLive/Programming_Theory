@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Currencies / Transactions</title>
+</head>
+
+<body>
+	<script>
+		const input = [
+			['usd', 'buy', 10000],
+			['usd', 'sell', 5000],
+			['gbp', 'buy', 9000],
+			['eur', 'sell', 7000],
+			['uah', 'buy', 10000],
+			['usd', 'sell', 25000],
+		]
+
+		let result = {}
+		input.forEach((item) => {
+			let [currency, type, amount] = item // destructarization
+
+			if (!result[currency]) {
+				result[currency] = [0, 0];
+			}
+			result[currency][type === 'buy' ? 0 : 1] += amount
+		})
+
+		console.log(result)
+/* 		{
+		eur: (2) [0, 7000]
+		gbp: (2) [9000, 0]
+		uah: (2) [10000, 0]
+		usd: (2) [10000, 30000]
+		} */
+
+
+		// ================= second solution
+		const input2 = [
+			['usd', 'buy', 10000],
+			['usd', 'sell', 5000],
+			['gbp', 'buy', 9000],
+			['eur', 'sell', 7000],
+			['uah', 'buy', 10000],
+			['usd', 'sell', 25000],
+		]
+
+		let result2 = input2.reduce((acc, curr) =>{
+			acc[curr[0]] = acc[curr[0]] || [0,0];
+			acc[curr[0]][curr[1] === 'buy' ? 0 : 1] += curr[2]
+			return acc
+		}, {})
+
+		console.log(result2)
+
+	</script>
+</body>
+
+</html>
