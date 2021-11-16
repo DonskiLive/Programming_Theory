@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Find amount of Vowels (гласных) </title>
+</head>
+
+<body>
+	<script>
+
+		function findVowels(str) {
+			let count = 0;
+			const vowels = ['a', 'e', 'i', 'o', 'u']
+
+			for (let char of str.toLowerCase()) {
+				if (vowels.includes(char)) {
+					count++
+				}
+			}
+			return count
+		}
+		console.log(findVowels('hello')) // 2
+
+		function countItem2(arr, item) {
+			return arr.reduce((count, el) => el === item ? count + 1 : count, 0)
+		}
+		console.log(countItem2([234, 32, 56, 43, 21, 35, 27, 3, 76, 2, 567, 32, 12352], 32))
+	</script>
+</body>
+
+</html>
