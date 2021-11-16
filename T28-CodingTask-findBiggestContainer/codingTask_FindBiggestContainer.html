@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Find biggest Container - Calculate Area</title>
+</head>
+<body>
+	<script>
+	const input1 = [1,8,6,2,5,4,8,3,7] // 49
+	const input3 = [4,3,2,1,4] // 16
+
+	function maxArea(height){
+		let maxArea = 0;
+		let left = 0, right = height.length-1
+		while(left<right){
+			let currentVolume = Math.min(height[left], height[right]) * (right - left)
+			maxArea = Math.max(maxArea, currentVolume)
+			if(height[left]<height[right]){
+				left++
+			}else{
+				right--
+			}
+		}
+
+		return maxArea
+	}
+
+	console.log(maxArea(input1))
+	console.log(maxArea(input3))
+
+	</script>
+</body>
+</html>
