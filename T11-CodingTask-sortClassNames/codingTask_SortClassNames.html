@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sort Class Names (Calculate / Filter then Sort)</title>
+</head>
+
+<body>
+	<script>
+		let classNames = ['header', 'menu', 'menu-item', 'menu-item', 'menu-item', 'footer', 'menu', 'link', 'link', 'link', 'link']
+
+		let classNamesCount = {}, arrayUniq = []
+		for (let i = 0; i < classNames.length; i++) {
+			let current = classNames[i]
+			if (classNamesCount[current]) {
+				classNamesCount[current] += 1
+			} else {
+				classNamesCount[current] = 1
+				arrayUniq.push(current)
+			}
+		}
+		let result = arrayUniq.sort((a, b) => classNamesCount[b] - classNamesCount[a])
+		console.log(result)
+
+		/* 		let result = Object.keys(classNamesCount).sort((a, b) => classNamesCount[b] - classNamesCount[a])
+				console.log(result) */
+		/* let sortedObj = []
+		for (let key in classNamesCount) {
+			sortedObj.push({name: key,	amount: classNamesCount[key]})
+		}
+		sortedObj.sort((a, b) => a.amount - b.amount)
+		const sortingResult = []
+		sortedObj.forEach(el => sortingResult.push(Object.values(el)[0]))
+		console.log(sortingResult) */
+
+
+		// ============= Second option
+		let classNames2 = ['header', 'menu', 'menu-item', 'menu-item', 'menu-item', 'footer', 'menu', 'link', 'link', 'link', 'link']
+
+		let classNamesCount2 = classNames2.reduce((acc, elem) => {
+			if (acc[elem]) {
+				acc[elem] += 1
+			} else {
+				acc[elem] = 1
+			}
+			return acc;
+		}, {})
+		console.log(classNamesCount2)
+		let result2 = Object.keys(classNamesCount2).sort((a, b) => classNamesCount2[b] - classNamesCount2[a])
+		console.log(result2)
+
+
+	</script>
+</body>
+
+</html>
