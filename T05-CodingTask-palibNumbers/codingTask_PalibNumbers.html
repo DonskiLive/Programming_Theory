@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Palindrome from Numbers</title>
+</head>
+<body>
+	<script>
+		const input1 = 1221, // true
+		input2 = -121, //false
+		input3 = 10 // false
+
+		const isPalindromeNumber = function(x){
+			if (x < 0) return false;
+			if (x % 10 === 0) return false;
+			if (x < 10) return true;
+			let rev = 0;
+			while (x > rev){
+				console.log(x, rev)
+				rev *= 10;
+				rev += x % 10;
+				x = Math.trunc(x/10)
+			}
+			console.log(x, rev)
+			return x === rev || x === Math.trunc(rev/10) //! x === Math.trunc(rev/10)
+		}
+		console.log(isPalindromeNumber(input1))
+		console.log(isPalindromeNumber(input2))
+		console.log(isPalindromeNumber(input3))
+		// Hardness of solution 0(1) - constanta
+
+	</script>
+</body>
+</html>
