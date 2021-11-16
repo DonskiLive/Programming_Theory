@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Palindrome from String</title>
+</head>
+<body>
+	<script>
+		const str1 = 'Racecar' // true
+		const str2 = 'table' // false
+		const str3 = 1234321 // true
+		const str4 = 12343213 // false
+
+		function palindrome(str){
+			str = str.toString().toLowerCase().replaceAll(' ', '') // .replace(/\s/g,'') - regex
+			return str === str.split('').reverse().join('');
+		}
+
+		function palindrome2(str){
+			str = str.toString().toLowerCase()
+			const len = Math.floor(str.length/2)
+			for(let i=0; i<len; i++){
+				if(str[i] !== str[str.length - i -1]){
+					return false;
+				}
+				return true
+			}
+		}
+
+		console.log(palindrome(str1)) 
+		console.log(palindrome(str2))
+		console.log(palindrome(str3))
+		console.log(palindrome(str4))
+		console.log(palindrome2(str1)) 
+		console.log(palindrome2(str2))
+		console.log(palindrome2(str3))
+		console.log(palindrome2(str4))
+
+	</script>
+</body>
+</html>
