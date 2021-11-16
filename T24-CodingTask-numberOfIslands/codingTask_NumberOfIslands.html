@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Number of Islands inside matrix</title>
+</head>
+<body>
+	<script>
+		let grid2 = [
+			['1','1','0','0','0'],
+			['1','1','0','0','0'],
+			['0','0','1','0','0'],
+			['0','0','0','1','1']
+		]
+		let numIslands = function(grid){
+			let counter = 0;
+			let rowsL = grid.length;
+			let colsL = grid[0].length;
+			if(rowsL === 0) return 0
+
+			for(let R=0; R<rowsL; R++){
+				for(let C=0; C<colsL; C++){
+					if(grid[R][C]==='1'){
+						counter++;
+						markNeighbor(grid, R, C)
+					}
+				}
+			}
+			function markNeighbor(grid, R, C){
+				grid[R][C] = '6';
+				if(grid[R][C-1] === '1'){markNeighbor(grid, R, C-1)}
+				if(grid[R][C+1] === '1'){markNeighbor(grid, R, C+1)}
+				if(grid[R-1] && grid[R-1][C] === '1'){markNeighbor(grid, R-1, C)}
+				if(grid[R+1] && grid[R+1][C] === '1'){markNeighbor(grid, R+1, C)}
+			}
+			return counter
+		}
+		console.log(numIslands(grid2))
+	</script>
+</body>
+</html>
