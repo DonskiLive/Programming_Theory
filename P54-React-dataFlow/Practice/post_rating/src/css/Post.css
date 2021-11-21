@@ -1,0 +1,29 @@
+.post{
+	border: 1px solid black;
+	border-radius: 20px;
+	box-sizing: border-box;
+	box-shadow: inset 0px 0px 5px rgb(37, 37, 37);
+	padding: 5px;
+	margin: 5px;
+	width: 100%;
+	background-color: rgba(104, 253, 104, 0.1);
+	transition: all 0.5s ease;
+}
+
+.post:hover{
+	background-color: rgba(104, 253, 104, 0.3);
+}
+
+.post h2{
+	margin: 5px;
+}
+
+.post p, .post h5{
+	margin: 5px 0 5px 30px;
+	text-align: left;
+}
+
+.w100{
+	width: 100%;
+	height: auto !important;
+}

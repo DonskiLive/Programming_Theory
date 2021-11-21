@@ -1,0 +1,63 @@
+.rating-counter{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+}
+.rating-like, .rating-dislike{
+	height: 70px;
+	width: 70px;
+	position: relative;
+	font-size: 22px;
+	font-weight: 700;
+	cursor: pointer;
+	z-index: 1;
+	transition: all 0.5 ease;
+}
+.rating-like{
+	background: url(../img/like1.png) no-repeat center;
+	background-size: cover;
+	margin-bottom: 20px;
+	transition: all 0.5 ease;
+}
+.rating-like:hover, .rating-dislike:hover{
+	transform: scale(1.1);
+}
+
+.rating-like span{
+	position:absolute;
+	bottom: 12px;
+	left: 28px;
+}
+
+.rating-dislike{
+	background: url(../img/dislike1.png) no-repeat center;
+	background-size: cover;
+	margin-top: 20px;
+}
+.rating-dislike span{
+	position:absolute;
+	top: 10px;
+	left: 28px;
+}
+
+.counter{
+	width: 250px;
+}
+
+.counter h3{
+	margin: 0;
+}
+.counter h3 span{
+	font-size: 25px;
+}
+
+.danger{
+	background-color: rgba(253, 104, 104, 0.1) !important;
+	transition: all 0.5s ease;
+}
+
+.danger:hover{
+	background-color: rgba(253, 104, 104, 0.3) !important;
+}
