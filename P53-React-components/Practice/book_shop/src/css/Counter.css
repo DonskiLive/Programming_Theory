@@ -1,0 +1,30 @@
+.counter{
+	width: 150px;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: white;
+	border-radius: 20px;
+	margin: 10px auto;
+}
+.counter h4{
+	margin: 5px;
+}
+
+.counter span{
+	font-size: 35px;
+	display: block;
+}
+.btnMin, .btnPlus{
+	width: 50px;
+	margin:5px;
+	font-size: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.btnMin{
+	background-color: rgba(255, 0, 0, 0.1);
+}
+.btnPlus{
+	background-color: rgba(0, 128, 0, 0.1	);
+}

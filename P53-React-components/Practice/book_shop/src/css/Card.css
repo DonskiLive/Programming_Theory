@@ -1,0 +1,16 @@
+.card{
+	border: 1px solid rgb(54, 181, 255);
+	background-color: rgba(54, 181, 255, 0.1);
+	border-radius: 10px;
+	box-sizing: border-box;
+	padding: 10px;
+	width: calc(100%/3 - 10px);
+}
+
+.card img{
+	height: 300px;
+}
+
+.card h2, .card h5{
+	margin: 5px !important;
+}
