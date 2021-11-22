@@ -1,0 +1,8 @@
+.counter-bg{
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 5px;
+	background-color: #177EFB;
+	color: white;
+	font-size: 0.9em;
+}

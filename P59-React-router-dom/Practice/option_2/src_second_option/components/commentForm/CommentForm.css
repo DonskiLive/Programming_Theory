@@ -1,0 +1,35 @@
+.comment-form{
+	width: 100%;
+}
+
+.comment-name, .comment-input{
+	width: 98.25%;
+	padding: 10px;
+	margin: 5px 0;
+	border-radius: 5px;
+	border: 1px solid rgba(128, 128, 128, 0.5);
+	font-size: 0.9em;
+}
+
+.btn-container{
+	position: relative;
+}
+
+.add-btn{
+	padding: 5px 12px;
+	font-weight: 500;
+	margin-right: 10px;
+	background-color: #177EFB;
+	color: white;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	font-size: 0.9em;
+}
+
+.form-trash{
+	width: 25px;
+	position: absolute;
+	bottom: 2px;
+	cursor: pointer;
+}

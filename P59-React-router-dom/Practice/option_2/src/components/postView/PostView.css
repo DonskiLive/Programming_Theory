@@ -1,0 +1,37 @@
+.post-view{
+	width: 45% !important;
+	margin: 10px auto;
+	position: relative;
+	text-align: left;
+}
+
+.post-view p, .post-view h2, .post-view h3{
+	margin: 5px 0;
+	font-size: 0.9em;
+}
+.post-view p{
+text-align: justify;
+}
+
+.post-date{
+	font-size: 12px;
+	padding-top: 10px;
+}
+
+.back-btn{
+	position: absolute;
+	right: 0;
+	top: 10px;
+	padding: 4px 12px;
+	font-weight: 500;
+	background-color: grey;
+	color: white;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	font-size: 0.9em;
+}
+
+.divider{
+	margin: 15px 0;
+}
