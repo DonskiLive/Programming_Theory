@@ -1,0 +1,15 @@
+.App {
+  width: 1000px;
+  margin: 10px auto;
+}
+
+.App-nav li a{
+  text-decoration: none;
+  color: black;
+}
+
+.App-nav li a.active{
+  color:red;
+}
+
+
