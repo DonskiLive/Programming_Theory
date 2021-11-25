@@ -1,0 +1,21 @@
+<h1>Courses</h1>
+{{#if courses.length}}
+<div class="row mt-5">
+    {{#each courses}}
+    <div class="col-3">
+    <div class="card">
+        <img src={{img}} class="card-img-top" alt={{title}}>
+        <div class="card-body">
+            <h5 class="card-title">{{title}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <p class = "card-text">{{price}} $</p>    
+            <a href="#" class="btn btn-primary">buy course</a>
+        </div>
+    </div>
+    </div>
+    {{/each}}
+</div>
+{{else}}
+<p>No course yet</p>
+{{/if}}

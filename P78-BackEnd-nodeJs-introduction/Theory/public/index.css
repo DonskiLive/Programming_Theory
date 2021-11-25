@@ -1,0 +1,15 @@
+.navbar-brand{
+    font-size:1.5rem;
+    border:2px solid rgba(255, 255, 255, 0.81);
+    padding: 5px;
+    text-align: center;
+    line-height: 22px;
+}
+
+.nav-link{
+    font-size: 1.25rem;
+}
+
+.navbar-nav{
+    margin-left: auto;
+}

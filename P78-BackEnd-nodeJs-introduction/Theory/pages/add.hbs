@@ -1,0 +1,20 @@
+<h1>Add course</h1>
+<form class="needs-validation mt-4" action = "/add" method="POST" novalidate>
+  <div class="form-group">
+    <label for="title">Course Title</label>
+    <input type="text" class="form-control" id="title" name="title" placeholder="Course Title" required>
+    <div class= "invalid-feedback">Please provide a valid title</div>
+  </div>
+  <div class="form-group">
+    <label for="price">Course price</label>
+    <input type="number" class="form-control" id="price" name="price" placeholder="Course price" min="1" required>
+    <div class= "invalid-feedback">Please provide a valid price</div>
+  </div>
+  <div class="form-group">
+    <label for="img">Picture url</label>
+    <input type="text" class="form-control" id="img" name="img" placeholder="Picture url" required>
+    <div class= "invalid-feedback">Please provide a valid url</div>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
