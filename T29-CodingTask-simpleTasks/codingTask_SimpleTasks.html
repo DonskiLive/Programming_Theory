@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Tasks</title>
+</head>
+
+<body>
+	<script>
+		const users = [
+			{ name: 'Vasya', age: 25, height: 180 },
+			{ name: 'Petya', age: 12, height: 145 },
+			{ name: 'Nikolay', age: 35, height: 175 },
+			{ name: 'Anna', age: 19, height: 170 }
+		]
+		// =======================================================
+		console.log('1. Создать новый массив юзеров старше 20 лет')
+		const usersOlder20 = users.filter(user => user.age > 20)
+		console.log(users)
+		console.log(usersOlder20)
+
+		// =======================================================
+		console.log('2. Создать массив юзеров ниже 150см')
+		const usersLower150 = users.filter(user => user.height < 150)
+		console.log(users)
+		console.log(usersLower150)
+
+		// =======================================================
+		console.log('3. Добывить в существующий массив уникальный id для каждого юзера')
+		users.map((user, index) => user.id = index + 1)
+		console.log(users)
+
+		// =======================================================
+		console.log('4. Вернуть юзера с самым длинным именем')
+		const longestName = users.reduce((max, user) => max.name.length > user.name.length ? max : user)
+		console.log(users)
+		console.log(longestName)
+
+		// =======================================================
+		console.log('5. Вернуть массив -> ["Vasya, age: 25 years old, height: 180cm", ...')
+		const usersOverviewArr = users.map(user => `${user.name}, age: ${user.age} years old, height: ${user.height}cm`)
+		console.log(users)
+		console.log(usersOverviewArr)
+
+		// =======================================================
+		console.log('6. [Vasya Vasilev, Petya Petrov] -> [{firstName: "Vasya", lastName: "Vasilev"}, {firstName: "Petya", lastName: "Petrov"}')
+		console.log('First solution:')
+		const usersNameArr = ['Vasya Vasilev', 'Petya Petrov']
+		const usersNewNameArr = usersNameArr.map(user => ({ firstName: user.split(' ')[0], lastName: user.split(' ')[1] }))
+		console.log(usersNameArr)
+		console.log(usersNewNameArr)
+
+		console.log('Second solution:')
+		const usersVeryNewNameArr = []
+		for (let user of usersNameArr)
+			usersVeryNewNameArr.push({
+				firstName: user.split(' ')[0],
+				lastName: user.split(' ')[1]
+			})
+		console.log(usersNameArr)
+		console.log(usersVeryNewNameArr)
+
+		console.log('One more solution:')
+		const peopleNew = usersNameArr.map(p => p.split(' ')).map(p => ({ firstName: p[0], lastName: p[1] }))
+		console.log(usersNameArr)
+		console.log(peopleNew)
+
+		// =======================================================
+		console.log('7. Написать функцию fillArr(5, "hello") -> ["hello", "hello", "hello", "hello", "hello"]')
+		console.log('First solution:')
+		function fillArr(num, str) {
+			const fillArray = []
+			for (let i = 0; i < num; i++) {
+				fillArray.push(str)
+			}
+			return fillArray
+		}
+		console.log(fillArr(5, 'hello'))
+
+		console.log('Second solution:')
+		function fillArr2(num, str) {
+			let fillArray2 = new Array(num)
+			return fillArray2.fill(str);
+		}
+		console.log(fillArr2(5, 'hello'))
+
+		// =======================================================
+		console.log('8. Написать функцию changeSting("abcdef") -> "aBcDeF"')
+		function changeSting(string) {
+			return string.split('').map((el, index) => index % 2 ? el.toUpperCase() : el.toLowerCase()).join('')
+		}
+		console.log(changeSting('abcdef'))
+
+		// =======================================================
+		console.log('9. Написать функцию countItem(arr, el) -> сколько раз элемент повтаряеться в массиве')
+		function countItem(arr, el) {
+			return arr.join('').length - arr.join('').replaceAll(el, '').length
+		}
+		console.log(countItem(['Vasya Vasileev', 'Petya Peetrov'], 'e'))
+		console.log(countItem([234, 32, 56, 43, 21, 35, 27, 3, 76, 2, 567, 32, 12352], 2))
+
+		// =======================================================
+		function countItem2(arr, item) {
+			return arr.reduce((count, el) => el === item ? count + 1 : count, 0)
+		}
+		console.log(countItem2(['Vasya Vasileev', 'Petya Peetrov'], 'e'))
+		console.log(countItem2([234, 32, 56, 43, 21, 35, 27, 3, 76, 2, 567, 32, 12352], 32))
+
+		// =======================================================
+		console.log('10. Написать функцию clearArr([1, 2, 3, null, "", undefined, 5, NaN, 7]) -> [1, 2, 3, 5, 7]')
+		function clearArr(arr) {
+			return arr.filter(el => Boolean(el))
+		}
+		console.log(clearArr([1, 2, 3, null, '', undefined, 5, NaN, 7]))
+
+		function clearArray(arr) {
+			return arr.filter(el => el)
+		}
+		console.log(clearArray([1, 2, 3, null, '', undefined, 5, NaN, 7]))
+
+		// =======================================================
+		console.log("11. RecusionOutput / n = 10 function recusionOutput(n) -> '12345678910'")
+		function recusionOutput(n) {
+			if (n == 1) return '1 '
+			return (recusionOutput(n - 1)) + `${n} `;
+		}
+
+		function recusionOutput2(n) {
+			return n == 1 ? '1 ' : recusionOutput(n - 1) + n + ' ';
+		}
+		console.log(recusionOutput(15))
+		console.log(recusionOutput2(11))
+
+		function recusionOutput3(n) {
+			if (n == 1) return 1;
+			return (recusionOutput3(n - 1)).toString() + n;
+		}
+		console.log(recusionOutput3(10))
+
+		// =======================================================
+		console.log("12. RecursiveFactorial / recursiveFactorial(5) -> 120")
+		// Recursion = (обращение внутри метода к самому себе) - пример решение факториала
+		// 5! = 5*4*3*2*1   -> 4!*5 // 4! = 4*3*2*1     -> 3!*4
+		// 3! = 3*2*1       -> 2!*3 // 2! = 2*1         -> 1!*2
+		// 1! = 1*0         -> 0!*1 // 0! = 1           -> 1
+		function recursiveFactorial(n) {
+			if (n == 0) {
+				return 1;
+			} else {
+				return recursiveFactorial(n - 1) * n
+			}
+		}
+		console.log(recursiveFactorial(5))
+
+		// =======================================================
+		console.log("13. CheckPolindrom / checkPolindrom('nagan') -> true")
+		/* 'шалаш' 'abba' 'потоп' 'а роза упала на лапу азора'
+		function checkPolindrom('nagan') -> true;
+		checkPolindrom('grhjs') -> false; */
+		const checkPalindrome = function (str) {
+			let res = str.split(' ').join('')
+			if (res.length < 2) return true
+			/* if(res.length === 1) return true
+			if(res.length === 2) return res[0] === res[1] */
+			if (res[0] == res.slice(-1)) return checkPalindrome(res.slice(1, -1))
+			return false
+		}
+		console.log(checkPalindrome('а роза упала на лапу азора'))
+		console.log(checkPalindrome('а роза упала н лапу азора'))
+
+		function checkPolindrom2(str) {
+			let arr = str.replaceAll(' ', '').split('');
+			for (let i = 0, j = arr.length - 1; i < j;) {
+				if (arr[i++] == arr[j--]) continue
+				return false
+			}
+			return true
+		}
+		console.log(checkPolindrom2('а роза упала на лапу азора'))
+		console.log(checkPolindrom2('а роза упала н лапу азора'))
+
+		function checkPolindrom3(str) {
+			str = str.replaceAll(' ', '')
+			return str.split('').reverse().join('').includes(str)
+		}
+		console.log(checkPolindrom3('а роза упала на лапу азора'))
+		console.log(checkPolindrom3('а роза упала н лапу азора'))
+
+		// =======================================================
+		console.log("14. ChangedUsers / FullName = firstName + lastName")
+		// метод, который получает массив вида users возвращает массив вида changedUsers
+		const users_14 = [
+			{ firstName: 'Vasya', lastName: 'Pupkin', id: 1 },
+			{ firstName: 'Vas', lastName: 'Pupk', id: 2 },
+			{ firstName: 'Sasha', lastName: 'Vasin', id: 3 }
+		]
+		function changedUsers(array) {
+			const newArray = [];
+			for (let i = 0; i < array.length; i++) {
+				newArray.push({
+					fullName: array[i].firstName + ' ' + array[i].lastName,
+					id: array[i].id
+				})
+			}
+			return newArray
+		}
+		console.log(changedUsers(users_14))
+		console.log(users_14)
+
+		function changedUsers2(array) {
+			const newArray = [];
+			for (let user of array) {
+				const { firstName = '', lastName = '', id = 'missed' } = user; // Object Destructurisation
+				newArray.push({
+					fullName: firstName + ' ' + lastName,
+					id // = id = id
+				})
+			}
+			return newArray
+		}
+		console.log(changedUsers2(users_14))
+		console.log(users_14)
+
+		function changedUsers3(array) {
+			return array.map(user => ({
+				fullName: user.firstName + ' ' + user.lastName,
+				id: user.id
+			}))
+		}
+		console.log(changedUsers3(users_14))
+		console.log(users_14)
+
+		// =======================================================
+		console.log("15. BubbleSort")
+		const arr = [8, 1, 4, 7, 3, 5, 12, 2, 9]
+		function bubbleSort(array) {
+			let swapped, i = 1
+			do {
+				swapped = false
+				for (let j = 0; j < array.length - 1; j++) {
+					if (array[j] > array[j + 1]) {
+						let tmp = array[j];
+						array[j] = array[j + 1]
+						array[j + 1] = tmp
+						swapped = true
+					}
+				}
+				i++;
+			} while (swapped)
+			console.log(array)
+		}
+		bubbleSort(arr)
+
+		// =======================================================
+		console.log("16. BubbleSortFromEnd")
+		const testArr = [8, 1, 4, 7, 3, 5, 12, 2, 9]
+		function bubbleSortEnd(array) {
+			for (let i = array.length - 1; i > 0; i--) {
+				for (let j = 0; j < i; j++) {
+					if (array[j] > array[i]) {
+						let tmp = array[j];
+						array[j] = array[i]
+						array[i] = tmp
+					}
+				}
+				/* console.log(array) */
+			}
+			return array
+		}
+		console.log(bubbleSortEnd(testArr))
+
+		// =======================================================
+		console.log("17. BinarySearchOfSortedArray")
+		let iteration = 0
+		const numbArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 30, 32, 54]
+		function binarySearch(array, number) {
+			let low = 0, high = array.length - 1;
+			while (low <= high) {
+				let middle = Math.floor((low + high) / 2);
+				iteration++
+				if (array[middle] === number) {
+					return middle;
+				}
+				else if (array[middle] > number) {
+					high = middle - 1;
+				} else {
+					low = middle + 1
+				}
+			}
+			return -1
+		}
+		console.log(binarySearch(numbArr, 7))
+		console.log(iteration)
+
+		// =======================================================
+		console.log("18. SearchOfNotSortedArray")
+		let iteration2 = 0
+		const numbArr2 = [8, 1, 4, 7, 3, 5, 12, 2, 9, 32, 54, 11, 10, 6, 30]
+		function binarySearch2(array, number) {
+			for (let i = 0, j = array.length - 1; i < j;) {
+				iteration2++
+				if (array[Math.floor((array.length - 1) / 2)] == number) {
+					return Math.floor((array.length - 1) / 2)
+				}
+				else if (number == array[i] || number == array[j]) {
+					if (number == array[i]) return i
+					return j
+				}
+				i++
+				j--
+				continue
+			}
+			return -1
+		}
+		console.log(binarySearch2(numbArr2, 32))
+		console.log(iteration2)
+
+		// =======================================================
+		console.log("19. Штатное расписание, создать фирму")
+		/* заполняем сотрудниками (обьектами) с полями Name, salary pro hour, working Hours
+ведомость с списком сотрудников, подсчитаная зарплата, общая сумма всех зарплат */
+
+		start()
+		function start() {
+			const company = createCompany('ABC', 5)
+			const DOC = createDoc('ADAC-July', company.team)
+			console.log(company)
+			console.log(DOC)
+		}
+		function createCompany(name, qty) {
+			return {
+				name: name,
+				qty: qty,
+				team: createTeam(qty),
+			}
+		}
+		function createTeam(quantity) {
+			const team = []
+			for (let i = 0; i < quantity; i++) {
+				team.push({
+					name: `employee_${i + 1}`,
+					hours: Math.floor(Math.random() * 120),
+					rate: 30
+				})
+			}
+			return team
+		}
+		function createDoc(name, personals) {
+			return {
+				name: name,
+				list: createList(personals),
+				total: getTotal(personals)
+			}
+		}
+		function createList(team) {
+			let list = []
+			for (let i = 0; i < team.length; i++) {
+				list.push({
+					name: team[i].name,
+					salary: team[i].hours * team[i].rate,
+				})
+			}
+			return list
+		}
+		function getTotal(team) {
+			let sum = 0;
+			for (let i = 0; i < team.length; i++) {
+				sum += team[i].hours * team[i].rate
+			}
+			return sum
+		}
+
+		// =======================================================
+		console.log("20. Отсортировать юзеров по возрасту")
+		const users_20 = [
+			{ name: 'Anna', address: { city: 'Berlin', country: 'Germany' }, age: 32 },
+			{ name: 'Vasya', address: { city: 'Tokio', country: 'Japan' }, age: 28 },
+			{ name: 'Mariya', address: { city: 'London', country: 'England' }, age: 15 },
+			{ name: 'Mark', address: { city: 'Rom', country: 'Italy' }, age: 46 },
+			{ name: 'Sofi', address: { city: 'Verona', country: 'Italy' }, age: 38 },
+			{ name: 'Sergio', address: { city: 'Barcelona', country: 'Spain' }, age: 18 }
+		]
+
+		function sortByField(key) {
+			return (a, b) => a[key] > b[key] ? 1 : -1
+		}
+		console.log(users_20.sort(sortByField('age')))
+
+		function sortAgeGrow(array) {
+			const sortedArray = array.slice()
+			return sortedArray.sort((a, b) => a.age - b.age)
+		}
+		console.log(sortAgeGrow(users_20))
+		console.log(users_20)
+
+		// =======================================================
+		console.log("21. FilterBySelectedRange / filterRange(array,1,4) -> [1,3,4]")
+		const arr_21 = [1, 5, 8, 4, 6, 9, 3, 10]
+		function filterRange(array, minNum, maxNum) {
+			const filtedArray = array.slice()
+			return filtedArray.filter(item => item >= minNum && item <= maxNum).sort((a, b) => a - b)
+		}
+		console.log(filterRange(arr_21, 1, 4))
+		console.log(arr_21)
+
+		function filterRange2(array, min, max) {
+			const newArr = [...array].sort((a, b) => a - b);
+			for (let i = 0; i < newArr.length; i++) {
+				if (newArr[i] < min) {
+					newArr.splice(i, 1)
+					i--;
+				}
+				if (newArr[i] > max) {
+					newArr.splice(i)
+					break
+				}
+			}
+			return newArr
+		}
+		console.log(filterRange2(arr_21, 1, 4))
+		console.log(arr_21)
+
+		// =======================================================
+		console.log("22. Отсортировать в порядке убывания")
+		const arrNumb = [7, 3, 8, 9, 10, 2] /*  -> [10,9,8,7,3,2] */
+
+		function sortNumberReduce(arr) {
+			const sortedArr = arr.slice()
+			return sortedArr.sort((a, b) => b - a)
+		}
+		console.log(sortNumberReduce(arrNumb))
+		console.log(arrNumb)
+
+		// =======================================================
+		console.log("23. FilterOfRepeatedNumbers / [2, 0, 0, 1, 1, 2] -> [2, 0, 1]")
+		/* написать метод, который на вход получает массив целых чисел, которые могут повторятся, а возвращает новый массив безповторяющихся чисел
+		[2, 5, 7, 9, 7, 2] -> [2, 5, 7, 9]
+		[2, 0, 0, 1, 1, 2] -> [2, 0, 1] */
+		const testArray = [2, 5, 7, 9, 7, 2]
+		function uniqNumber(array) {
+			const newArray = []
+			for (let number of array) {
+				if (!newArray.includes(number)) {
+					newArray.push(number)
+				}
+			}
+			return newArray
+		}
+		console.log(uniqNumber(testArray))
+
+		let array = [2, 5, 7, 9, 7, 2]
+		const uniqArray = array.filter((elm, i) => array.indexOf(elm) === i) // indexOff возвращает первое вхождение
+		console.log(uniqArray)
+
+		function filterNoRepeat(arr) {
+			return arr.filter((num, index, arr) => arr.indexOf(num) == index);
+		}
+		console.log(filterNoRepeat(uniqArray))
+
+		// =======================================================
+		console.log("24. CompareFirstLastNumberReplaceValueForBigger / [1,5,6,7,2] -> [2,2,2,2,2]")
+		/* написать метод, который на вход получает массив целых чисел, сравнивает первый и последний элемент этого массива и возвращает новый массив, в котором все элементы старого массива заменены на большее значение.
+		[1, 5, 6, 7, 2] -> [2, 2, 2, 2, 2];
+		[7, 3, 8, 4] -> [7, 7, 7, 7] */
+		const testArray2 = [1, 5, 6, 7, 2]
+		function replaceValue(arr) {
+			const newArray = [...arr] // arr.slice();
+			const max = arr[0] > arr[arr.length - 1] ? arr[0] : arr[arr.length - 1]
+			newArray.fill(max, 0, arr.length - 1)
+			return newArray
+		}
+		console.log(replaceValue(testArray2))
+		console.log(testArray2)
+
+		function strangeArrChanger(arr) {
+			const max = arr[0] > arr[arr.length - 1] ? arr[0] : arr[arr.length - 1]
+			return arr.map(item => item = max)
+		}
+		const newArray = strangeArrChanger(testArray2)
+		console.log(newArray)
+
+		console.log(strangeArrChanger(testArray2))
+		console.log(testArray2)
+
+		const array3 = [1, 5, 6, 7, 2]
+		const array4 = [7, 3, 8, 4]
+		function strangeArrChanger(arr) {
+			return arr.map(item => item = (arr[0] > arr[arr.length - 1] ? arr[0] : arr[arr.length - 1]))
+		}
+		console.log(strangeArrChanger(array3))
+		console.log(strangeArrChanger(array4))
+
+		// =======================================================
+		console.log("25. Метод изменить строку / 'background-color' -> backgroundColor")
+		// 'background-color' -> backgroundColor;
+		// 'list-style-image' -> listStyleImage;   
+		//void - метод который ничего не возвращают
+		function changeString(string) {
+			const words = string.split('-');
+			for (let i = 1; i < words.length; i++) {
+				words[i] = words[i].slice(0, 1).toUpperCase() + words[i].slice(1)
+			}
+			return words.join('')
+		}
+		console.log(changeString('backgroung-color'))
+		console.log(changeString('list-style-image'))
+
+		function changeString2(string2) {
+			return string2.split('-').map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)).join('')
+		}
+		console.log(changeString2('backgroung-color'))
+		console.log(changeString2('list-style-image'))
+
+		const kebabExample = "list-style-image-background-color-average-rendom-array-document-write-console-log-return-factorial"
+		const word = kebabExample.split('-')
+		let string = '', anyNumber = 0
+		for (let i = 0; i < parseInt((Math.random() * 4) + 2); i++) {
+			anyNumber = parseInt(Math.random() * word.length)
+			string += "-" + word[anyNumber]
+		}
+		const kebabString = string.replace('-', "'") + "'"
+
+		function camelStr(kebabStr) {
+			return kebabStr.replaceAll("'", "").split('-').map((item, index) => index != 0 ? item.charAt(0).toUpperCase() + item.slice(1).toLowerCase() : item).join("");
+		}
+		console.log(`Text written in kebab case: ${kebabString}, in camel case will look following: ${camelStr(kebabString)}`)
+
+		// =======================================================
+		console.log("26. Средннее арифметическое значение массива чисел")
+		function averageArray(array) {
+			let sum = 0;
+			for (let i = 0; i < array.length; i++) {
+				sum += array[i];
+			}
+			return sum / array.length
+		}
+
+		function averageArray2(array) {
+			let sum = 0;
+			for (let num of array) {
+				sum += num;
+			}
+			return sum / array.length
+		}
+
+		function averageArray3(arr) {
+			return arr.reduce((sum, current) => (sum + current)) / arr.length
+		}
+
+		const numbers = [1, 4, 6, 8, 9]
+		console.log(averageArray(numbers))
+		console.log(averageArray2(numbers))
+		console.log(averageArray3(numbers))
+
+		// =======================================================
+		console.log("27. Factorial (5! -> 5 * 4 * 3 * 2 * 1)")
+		function factorial(n) {
+			let result = 1;
+			if (n == 0 || n == 1) return result;
+			for (let i = 2; i <= n; i++) {
+				result *= i
+			}
+			return result
+		}
+		console.log(factorial(5))
+
+		function factorial(num) {
+			for (let i = num - 1; i > 0; i--) num *= i
+			return num
+		}
+		console.log(factorial(5))
+
+		function calcFactorial(number) {
+			let factorial = 1;
+			while (number) {
+				factorial *= number--;
+			}
+			return factorial;
+		}
+		const randomNumber = parseInt(Math.random() * 9 + 1)
+		console.log(`Factorial of random number: ${randomNumber}, equal to: ${calcFactorial(randomNumber)}`)
+
+		// =======================================================
+		console.log("28. PowerNumber")
+		const powerN = (a, b) => a ** b;
+		console.log(powerN(3, 3))
+
+		function powerNum(number, power) {
+			let result = number;
+			for (let i = 1; i < power; i++) {
+				result *= number;
+			}
+			return result;
+		}
+		console.log(powerNum(5, 3))
+
+		// =======================================================
+		console.log("29. SumArrayNumbers")
+		const numbers_29 = [2, 4, 6, 10, 12, 40, 50, 60, 45, 80];
+		function sumArrayNumbers(array) {
+			let sum = 0;
+			for (let num of array) { /* Array */
+				sum += num;
+			}
+			return sum
+		}
+		console.log(sumArrayNumbers(numbers_29));
+
+		function sumNumbers(array) {
+			let sum = 0;
+			for (let num in array) { /* Object */
+				sum += array[num];
+			}
+			return sum
+		}
+		console.log(sumNumbers(numbers_29));
+
+		// =======================================================
+		const usersArray = [
+			{ name: 'Anna', address: { city: 'Berlin', country: 'Germany' }, age: 32 },
+			{ name: 'Vasya', address: { city: 'Tokio', country: 'Japan' }, age: 28 },
+			{ name: 'Mariya', address: { city: 'London', country: 'England' }, age: 16 },
+			{ name: 'Mark', address: { city: 'Rom', country: 'Italy' }, age: 46 },
+			{ name: 'Sofi', address: { city: 'Verona', country: 'Italy' }, age: 38 },
+			{ name: 'Sergio', address: { city: 'Barcelona', country: 'Spain' }, age: 18 }]
+		console.log("30. UsersArray / Посчитать средний возраст users")
+		// когда перебираем масив состоящий не только из чисел тогда при начале перебора инициализация работает по первому элементу. Путем добавления 0 ((sum, user) => sum + user.age, 0) мы инициализируем первый элемент как номер с значением 0 таким образом последующие элементы будут восприменяться как номер. Отсутствие 0 - приведёт к NaN
+		console.log((usersArray.reduce((sum, user) => sum + user.age, 0) / users.length).toFixed(0))
+		console.log((usersArray.map(user => user.age).reduce((sumAge, userAge) => sumAge + userAge) / users.length).toFixed(0))
+
+		const usersAverageAge = (usersArray.map(users => users.age).reduce((sum, current) => (sum + current)) / users.length).toFixed(0)
+		console.log(`Middle-aged of all users: ${usersAverageAge} years`)
+
+		console.log("31. UsersArray / Найти самого молодого")
+		function getYoungest(arrayUsers) {
+			let joungest = arrayUsers[0];
+			for (let i = 1; i < arrayUsers.length; i++) {
+				if (joungest.age > arrayUsers[i].age) {
+					joungest = arrayUsers[i];
+				}
+			}
+			return joungest;
+		}
+		console.log(getYoungest(usersArray))
+
+		function getYoungest2(arrayUsers) {
+			let joungest = arrayUsers[0];
+			for (let user of arrayUsers) {
+				if (joungest.age > user.age) {
+					joungest = user;
+				}
+			}
+			return joungest;
+		}
+		console.log(getYoungest2(usersArray))
+
+		function getYoungest3(arrayUsers) {
+			let joungest = arrayUsers[0];
+			arrayUsers.forEach(user => {
+				if (joungest.age > user.age) {
+					joungest = user;
+				}
+			})
+			return joungest;
+		}
+		console.log(getYoungest3(usersArray))
+
+		const youngestUser = Math.min.apply(null, usersArray.map(users => users.age))
+		console.log(youngestUser)
+
+		console.log("31. UsersArray / Найти самого старшего")
+		const oldestUser = usersArray.reduce((oldest, user) => oldest.age > user.age ? oldest : user)
+		console.log(oldestUser)
+
+		const oldestUser2 = Math.max.apply(null, usersArray.map(users => users.age))
+		console.log(`The oldest user: ${oldestUser2} years old, and ${printUserName(oldestUser2)}`)
+		function printUserName(userAge) {
+			let name = (usersArray.filter(user => user.age == userAge).map(users => users.name)).toString()
+			return name = name.endsWith('a') ? ' her name is ' + name : ' his name is ' + name
+		}
+
+		console.log("32. UsersArray / Массив из юзеров, которые не живут в Италии")
+		const notItalienerUser = usersArray.filter(user => user.address.country != 'Italy')
+		console.log(notItalienerUser)
+
+		console.log("33. UsersArray / Массив юзеров, которые старше 16, но младше 35")
+		// сравнивается в бинарном виде & / сравнивается обычно &&
+		const middleAgedUsers = usersArray.filter(user => user.age > 16 && user.age < 35)
+		console.log(middleAgedUsers)
+
+		console.log("34. UsersArray / Создать отдельный массив из имён юзеров")
+		const usersNames = usersArray.map(user => user.name).sort()
+		console.log(usersNames)
+
+		function getProperty(arrayUsers, propertyName) {
+			return arrayUsers.map(user => user[propertyName]);
+		}
+		console.log(getProperty(usersArray, 'age'))
+		console.log(getProperty(usersArray, 'name'))
+
+		console.log("35. UsersArray / Массив из юзеров, чьи имена начинаются на 'М'")
+		const usersNameStartsWithM = usersArray.filter(user => user.name.toLowerCase().startsWith('m'))
+		console.log(usersNameStartsWithM)
+
+		console.log(`The name of following users begins with the letter "M": ${printUserDetails(usersNameStartsWithM)}`)
+		function printUserDetails(selectedUser) {
+			return (selectedUser.map(user => `${user.name}: ${user.age} years old - live in ${user.address.city} (${user.address.country}) `)).toString().replaceAll(',', '')
+		}
+
+		// =======================================================
+		console.log("36. ReverseArr")
+		const numbers_36 = [8, 1, 4, 7, 3, 5, 12, 2, 9]
+		function reverseArr(arr) {
+			let tempArr = arr.slice()
+			for (let i = 0; i < arr.length / 2; i++) {
+				const temp = arr[i];
+				arr[i] = arr[arr.length - 1 - i]
+				arr[arr.length - 1 - i] = temp;
+			}
+			return tempArr
+		}
+		console.log(reverseArr(numbers_36))
+
+		function reverseArr2(arr) {
+			let reverseArray = [];
+			for (let i = arr.length - 1; i >= 0; i--) {
+				reverseArray.push(arr[i])
+			}
+			return reverseArray
+		}
+		console.log(reverseArr2(numbers_36))
+		console.log(numbers_36)
+
+		// =======================================================
+		console.log("37. PifagorTable")
+		let pifagorTable = [[], [], [], [], [], [], [], [], [], []]
+		for (let i = 0; i < 10; i++) {
+			for (let j = 0; j < 10; j++) {
+				pifagorTable[i][j] = (i + 1) * (j + 1);
+			}
+		}
+		console.log(pifagorTable)
+		console.log(pifagorTable[3][3])
+
+		let numbers_37 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+		let pif = [];
+		for (let k = 1; k <= 10; k++) {
+			let temp = [];
+			for (let i = 0; i < numbers_37.length; i++) {
+				temp.push(numbers_37[i] * k)   //temp[i] = numbers[i] * k;
+			}
+			pif.push(temp);
+		}
+		console.log(pif)
+		console.log(pifagorTable[4][7])
+
+		let pifagor = [];
+		for (let i = 1; i < 11; i++) {
+			pifagor[i] = []
+			for (let j = 1; j < 11; j++) {
+				pifagor[i][j] = j * i;
+			}
+		}
+		console.log(pifagor)
+
+		document.write('<h1 style = "text-align: center ">Multiply table (Option 1)</h1>');
+		document.write('<table style = "background-color: #CBFFAA" border = "1" cellspacing = "0" cellpading = "5" align = "center" width="800px" height="600px">')
+		for (let i = 1; i < 11; i++) {
+			document.write("<tr>");
+			for (let j = 1; j < 11; j++) { document.write(`<td align = "center">${j}&times;${i} =  ${pifagorTable[i - 1][j - 1]} </td>`) }
+			document.write("</tr>")
+		} document.write("</table>")
+
+		// =======================================================
+		console.log("38. NumbersLineFromEnteredTo1")
+		let num = 10, str = '';
+		while (num > 0) {
+			str += num + '';
+			num--;
+		}
+		console.log(str)
+
+		str = '';
+		for (let i = num; i > 0; i--) {
+			str += i + ' ';
+		}
+		let n;
+		while (isNaN(n) || n <= 0) {
+			n = parseFloat(prompt('Enter any number\n(Recommendation: type number greater than 5)', 5));
+		}
+
+		let line = '';
+		for (let k = n; k >= 1; k--) {
+			line += (k + '  ')
+		}
+		console.log(line);
+
+		console.log(`Automatically generated line from ${n} till 1:\n${line}`)
+
+		// =======================================================
+		console.log("38. PrimeNumbers")
+		num = 13;
+		let isPrime;
+		str = ''
+		for (let i = 2; i <= num; i++) {
+			isPrime = true;
+			for (let j = 2; j < i / 2; j++) {
+				if (i % j == 0) {
+					isPrime = false;
+					break;
+				}
+			}
+			if (isPrime) str += i + ' ';
+		}
+		console.log(str)
+
+		let maxNumber = prompt('Please enter any number\n(Recommendation: type number greater than 50)', 50);
+		let primeNumbers = '';
+		searchLoop:
+		for (let i = 2; i <= maxNumber; i++) {
+			for (let j = 2; j < i; j++) {
+				if (i % j == 0) continue searchLoop;
+			}
+			primeNumbers += (i + ',  ');
+		}
+		console.log(`All primes numbers from 2 till ${maxNumber}:\n${primeNumbers.substring(0, primeNumbers.length - 3)}.`)
+
+		// =======================================================
+		const salaries = {
+			John: 2000, Anna: 2100,
+			Piotr: 2500, Kate: 1900
+		}
+
+		console.log("39. Salaries / SumOfSalaries")
+		let sum_39 = 0;
+		for (let key in salaries) {
+			sum_39 += salaries[key];
+		}
+		console.log(`All salaries is: ${sum_39}`)
+
+		console.log("40. Salaries / Add object")
+		salaries.Maria = 3000; salaries.Mark = 2900;
+
+		console.log("41. Salaries / SalaryOfFirstAndLastEmployee")
+		let countOfKeys = 0;
+		for (let key in salaries) {
+			countOfKeys++;
+		}
+		console.log(countOfKeys);
+		let count = 0;
+		for (let key in salaries) {
+			count++;
+			if (count == 1 || count == countOfKeys) {
+				console.log(`${key} has salary: ${salaries[key]}`)
+			}
+		}
+		count = 0;
+		for (let key in salaries) {
+			count++;
+			if (count != 1 && count != countOfKeys) continue;
+			console.log(`${key} has salary: ${salaries[key]}`)
+		}
+
+		console.log("42. Salaries / MaxSalary")
+		let maxSalary = 0;
+		let keyName = '';
+		for (let key in salaries) {
+			if (salaries[key] > maxSalary) {
+				maxSalary = salaries[key];
+				keyName = key;
+			}
+		} console.log(`Maximal salary has ${keyName}, ${maxSalary}`)
+
+		// =======================================================
+		console.log("43. DoSomethingWithInputArray - while input Num / Callback")
+		function doSomethingWithInputArray(doSomething) {
+			let numbers = []
+			while (true) {
+				const userNumber = prompt('Enter the number, please');
+				if (userNumber === '' || userNumber == null || isNaN(userNumber)) {
+					break;
+				}
+				numbers.push(+userNumber)
+			}
+			return doSomething(numbers) // Callback
+		}
+		function sum(array) {
+			if (array.length == 0) {
+				return;
+			}
+			let sum = 0
+			for (let el of array) {
+				sum += el
+			}
+			return sum;
+		}
+		function changeElementInArray(array) {
+			return array.map(num => num *= 2) // Callback
+		}
+
+		alert(doSomethingWithInputArray(sum))
+		alert(doSomethingWithInputArray(changeElementInArray))
+		alert(doSomethingWithInputArray(function (array) {
+			return `your input is ${array.join('/ ')}`
+		}))
+		alert(doSomethingWithInputArray(array => `your input is ${array.join('/ ')}`))
+		alert(doSomethingWithInputArray(array => array.map(num => num *= 2)))
+		alert(doSomethingWithInputArray(array => array.filter(item => item % 2 == 0)))
+		alert(doSomethingWithInputArray(array => array.reduce((sum, item) => sum + item)))
+
+	</script>
+</body>
+
+</html>
