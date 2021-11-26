@@ -29,7 +29,7 @@
 		console.log(usersLower150)
 
 		// =======================================================
-		console.log('3. Добывить в существующий массив уникальный id для каждого юзера')
+		console.log('3. Добавить в существующий массив уникальный id для каждого юзера')
 		users.map((user, index) => user.id = index + 1)
 		console.log(users)
 
@@ -95,7 +95,7 @@
 		console.log(changeSting('abcdef'))
 
 		// =======================================================
-		console.log('9. Написать функцию countItem(arr, el) -> сколько раз элемент повтаряеться в массиве')
+		console.log('9. Написать функцию countItem(arr, el) -> сколько раз элемент повторяется в массиве')
 		function countItem(arr, el) {
 			return arr.join('').length - arr.join('').replaceAll(el, '').length
 		}
@@ -529,7 +529,7 @@
 		console.log(`Text written in kebab case: ${kebabString}, in camel case will look following: ${camelStr(kebabString)}`)
 
 		// =======================================================
-		console.log("26. Средннее арифметическое значение массива чисел")
+		console.log("26. Среднее арифметическое значение массива чисел")
 		function averageArray(array) {
 			let sum = 0;
 			for (let i = 0; i < array.length; i++) {
@@ -671,7 +671,7 @@
 		const youngestUser = Math.min.apply(null, usersArray.map(users => users.age))
 		console.log(youngestUser)
 
-		console.log("31. UsersArray / Найти самого старшего")
+		console.log("32. UsersArray / Найти самого старшего")
 		const oldestUser = usersArray.reduce((oldest, user) => oldest.age > user.age ? oldest : user)
 		console.log(oldestUser)
 
@@ -682,16 +682,16 @@
 			return name = name.endsWith('a') ? ' her name is ' + name : ' his name is ' + name
 		}
 
-		console.log("32. UsersArray / Массив из юзеров, которые не живут в Италии")
+		console.log("33. UsersArray / Массив из юзеров, которые не живут в Италии")
 		const notItalienerUser = usersArray.filter(user => user.address.country != 'Italy')
 		console.log(notItalienerUser)
 
-		console.log("33. UsersArray / Массив юзеров, которые старше 16, но младше 35")
+		console.log("34. UsersArray / Массив юзеров, которые старше 16, но младше 35")
 		// сравнивается в бинарном виде & / сравнивается обычно &&
 		const middleAgedUsers = usersArray.filter(user => user.age > 16 && user.age < 35)
 		console.log(middleAgedUsers)
 
-		console.log("34. UsersArray / Создать отдельный массив из имён юзеров")
+		console.log("35. UsersArray / Создать отдельный массив из имён юзеров")
 		const usersNames = usersArray.map(user => user.name).sort()
 		console.log(usersNames)
 
@@ -701,7 +701,7 @@
 		console.log(getProperty(usersArray, 'age'))
 		console.log(getProperty(usersArray, 'name'))
 
-		console.log("35. UsersArray / Массив из юзеров, чьи имена начинаются на 'М'")
+		console.log("36. UsersArray / Массив из юзеров, чьи имена начинаются на 'М'")
 		const usersNameStartsWithM = usersArray.filter(user => user.name.toLowerCase().startsWith('m'))
 		console.log(usersNameStartsWithM)
 
@@ -711,7 +711,7 @@
 		}
 
 		// =======================================================
-		console.log("36. ReverseArr")
+		console.log("37. ReverseArr")
 		const numbers_36 = [8, 1, 4, 7, 3, 5, 12, 2, 9]
 		function reverseArr(arr) {
 			let tempArr = arr.slice()
@@ -735,7 +735,7 @@
 		console.log(numbers_36)
 
 		// =======================================================
-		console.log("37. PifagorTable")
+		console.log("38. PifagorTable")
 		let pifagorTable = [[], [], [], [], [], [], [], [], [], []]
 		for (let i = 0; i < 10; i++) {
 			for (let j = 0; j < 10; j++) {
@@ -775,7 +775,7 @@
 		} document.write("</table>")
 
 		// =======================================================
-		console.log("38. NumbersLineFromEnteredTo1")
+		console.log("39. NumbersLineFromEnteredTo1")
 		let num = 10, str = '';
 		while (num > 0) {
 			str += num + '';
@@ -801,7 +801,7 @@
 		console.log(`Automatically generated line from ${n} till 1:\n${line}`)
 
 		// =======================================================
-		console.log("38. PrimeNumbers")
+		console.log("40. PrimeNumbers")
 		num = 13;
 		let isPrime;
 		str = ''
@@ -834,17 +834,17 @@
 			Piotr: 2500, Kate: 1900
 		}
 
-		console.log("39. Salaries / SumOfSalaries")
+		console.log("41. Salaries / SumOfSalaries")
 		let sum_39 = 0;
 		for (let key in salaries) {
 			sum_39 += salaries[key];
 		}
 		console.log(`All salaries is: ${sum_39}`)
 
-		console.log("40. Salaries / Add object")
+		console.log("42. Salaries / Add object")
 		salaries.Maria = 3000; salaries.Mark = 2900;
 
-		console.log("41. Salaries / SalaryOfFirstAndLastEmployee")
+		console.log("43. Salaries / SalaryOfFirstAndLastEmployee")
 		let countOfKeys = 0;
 		for (let key in salaries) {
 			countOfKeys++;
@@ -864,7 +864,7 @@
 			console.log(`${key} has salary: ${salaries[key]}`)
 		}
 
-		console.log("42. Salaries / MaxSalary")
+		console.log("44. Salaries / MaxSalary")
 		let maxSalary = 0;
 		let keyName = '';
 		for (let key in salaries) {
@@ -875,7 +875,7 @@
 		} console.log(`Maximal salary has ${keyName}, ${maxSalary}`)
 
 		// =======================================================
-		console.log("43. DoSomethingWithInputArray - while input Num / Callback")
+		console.log("45. DoSomethingWithInputArray - while input Num / Callback")
 		function doSomethingWithInputArray(doSomething) {
 			let numbers = []
 			while (true) {
