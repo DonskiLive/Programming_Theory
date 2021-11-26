@@ -1,0 +1,10 @@
+Start
+Tue Jul 13 17:56:28 UTC 2021
+drwxr-xr-x    5 Anton     Anton           237 Jan  9  2021 Anton
+drwxr-xr-x    4 Anton     Anton           140 Jul 13 17:49 run
+drwxr-xr-x    2 Anton     Anton          2312 Nov 21  2020 sbin
+drwxr-xr-x    2 Anton     Anton            37 May 29  2020 srv
+dr-xr-xr-x   12 Anton     Anton             0 Jul 13 17:49 sys
+drwxrwxrwt    2 Anton     Anton            37 Jan  9  2021 tmp
+drwxr-xr-x   10 Anton     Anton           229 Jun 24  2020 usr
+drwxr-xr-x   16 Anton     Anton           348 Aug 27  2020 var

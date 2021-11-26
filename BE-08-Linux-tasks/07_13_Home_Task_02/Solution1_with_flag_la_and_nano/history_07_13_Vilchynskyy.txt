@@ -1,0 +1,17 @@
+   0 mkdir -p /home/user/start/
+   1 touch /home/user/start/1.txt
+   2 echo Start >> /home/user/start/1.txt 
+   3 date >> /home/user/start/1.txt 
+   4 mkdir /opt/task/
+   5 cp /home/user/start/1.txt /opt/task/start.txt
+   6 cd /
+   7 ls -la | tail -8 >> /opt/task/start.txt 
+   8 cd
+   9 nano /opt/task/start.txt 
+  10 export_file /opt/task/start.txt 
+  11 nano /opt/task/start.txt 
+  12 sed 's/root/Anton/g' /opt/task/start.txt > /home/user/start/sed.txt
+  13 export_file /home/user/start/sed.txt 
+  14 diff /home/user/start/sed.txt /opt/task/start.txt > /home/user/start/changes.txt
+  15 export_file /home/user/start/changes.txt 
+  16 history > /tmp/history_07_13_Vilchynskyy.txt

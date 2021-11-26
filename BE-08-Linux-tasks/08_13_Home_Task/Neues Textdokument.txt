@@ -1,0 +1,19 @@
+mkdir /home/homework3/
+touch /home/homework3/myfirstbashscript.sh
+cd /home/homework3/
+chmod 744 myfirstbashscript.sh
+ls -la (-rwxr--r--    1 root     root             0 Aug 13 11:54 myfirstbashscript.sh)
+nano myfirstbashscript.sh 
+(
+#!/bin/bash
+USER=Anton
+
+date
+echo Hello from $USER
+echo I working from following directory: $(pwd)
+echo Number of actual processes: $(ps -ef | tail +2 | wc -l)
+
+)
+
+./myfirstbashscript.sh
+

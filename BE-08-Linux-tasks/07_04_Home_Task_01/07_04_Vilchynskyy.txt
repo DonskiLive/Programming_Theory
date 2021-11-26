@@ -1,0 +1,27 @@
+   0 cd /home
+   1 mkdir animals
+   2 mkdir animals/dogs
+   3 mkdir animals/cats
+   4 mkdir animals/fish
+   5 cd animals/
+   6 touch dogs/pluto
+   7 touch cats/garfield
+   8 touch fish/nemo
+   9 cd ../../tmp/
+  10 touch adam
+  11 mkdir /home/humans
+  12 cp adam /home/humans/
+  13 touch evA
+  14 mv evA /opt/eve
+  15 cd /opt/
+  16 mv eve /home/humans/
+  17 cd /home/humans/
+  18 ls
+  19 cd /home/
+  20 tree
+  21 cd /tmp/
+  22 tree
+  23 cd ../opt/
+  24 tree
+  25 cd
+  26 history > /tmp/07_04_Vilchynskyy.txt

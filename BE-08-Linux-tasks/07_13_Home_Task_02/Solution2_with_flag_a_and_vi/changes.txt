@@ -1,0 +1,10 @@
+--- /home/user/start/sed.txt
++++ /opt/task/start.txt
+@@ -1,6 +1,6 @@
+ Start
+ Tue Jul 13 18:33:52 UTC 2021
+-Anton
++root
+ run
+ sbin
+ srv

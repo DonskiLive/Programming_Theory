@@ -1,0 +1,6 @@
+Fri Aug 13 14:06:45 UTC 2021
+Hello dear Anton :)
+I working from following directory: /home/homework3
+Number of actual processes: 35
+Number of processes with name "bioset": 10
+Actual rights for file "/etc/passwd" is: -rw-r--r--

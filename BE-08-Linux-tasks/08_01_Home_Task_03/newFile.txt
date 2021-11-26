@@ -1,0 +1,9 @@
+Sun Aug  1 15:07:37 UTC 2021
+Available space: 53%, equal to: 2.6G
+   3 cat /proc/cpuinfo
+   4 mkdir /home/homework2/
+   5 date >> /home/homework2/newFile.txt
+   6 echo Available' 'space:' '$((100-$(df -h | grep -w "/" | awk '{print $5}' | tr -d "%")))%,' 'equal' 'to:' '$(df -h | grep -w "/" | awk '{print $4}') >> /home/homework2/newFile.txt
+   7 history | tail -5 >> /home/homework2/newFile.txt
+AuthenticX86
+Number of processes: 34

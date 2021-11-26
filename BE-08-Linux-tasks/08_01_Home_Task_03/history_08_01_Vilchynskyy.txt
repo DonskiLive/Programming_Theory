@@ -1,0 +1,15 @@
+   0 whoami
+   1 df
+   2 cat /etc/os-release
+   3 cat /proc/cpuinfo
+   4 mkdir /home/homework2/
+   5 date >> /home/homework2/newFile.txt
+   6 echo Available' 'space:' '$((100-$(df -h | grep -w "/" | awk '{print $5}' | tr -d "%")))%,' 'equal' 'to:' '$(df -h | grep -w "/" | awk '{print $4}') >> /home/homework2/newFile.txt
+   7 history | tail -5 >> /home/homework2/newFile.txt
+   8 grep -w "vendor_id" /proc/cpuinfo >> /home/homework2/newFile.txt
+--cat /proc/cpuinfo | grep vendor >> /home/homework2/newFile.txt
+   9 nano /home/homework2/newFile.txt
+  10 echo Number' 'of' 'processes:' '$(ps -ef | tail +2 | wc -l) >> /home/homework2/newFile.txt
+  11 cat /home/homework2/newFile.txt
+  12 export_file /home/homework2/newFile.txt
+  13 history > /tmp/history_08_01_Vilchynskyy.txt

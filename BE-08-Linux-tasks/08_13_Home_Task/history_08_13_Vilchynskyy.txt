@@ -1,0 +1,11 @@
+   0 mkdir /home/homework3/
+   1 touch /home/homework3/myfirstbashscript.sh
+   2 cd /home/homework3/
+   3 chmod 744 myfirstbashscript.sh
+   4 ls -la
+   5 nano myfirstbashscript.sh
+   6 /home/homework3/myfirstbashscript.sh
+   7 ./myfirstbashscript.sh >> /home/homework3/result.txt
+   8 export_file /home/homework3/result.txt
+   9 export_file /home/homework3/myfirstbashscript.sh
+  10 history > /tmp/history_08_13_Vilchynskyy.txt
