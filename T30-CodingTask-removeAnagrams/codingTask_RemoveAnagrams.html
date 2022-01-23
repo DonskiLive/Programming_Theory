@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Remove Anagrams</title>
+</head>
+
+<body>
+	<!-- Two strings are anagrams if they are permutations of each other. For example, “abca” is an anagram of “cbaa”. Given a List of strings, remove each string that is an anagram of an one of the earlier strings, then return the remaining List.
+For example, given the strings
+List<String> = {'code', 'doce', 'ecod', 'framer', 'frame'},
+the strings 'doce' and 'ecod' are both anagrams of 'code' so they are removed from the list. The words 'frame' and 'framer' are not anagrams due to the extra 'r' in 'framer', so they remain. The final list of strings is alphabetical order is ['code', 'framer', 'frame'].
+List<Spring> removeAnagrams(List<Spring> text) {
+}
+List<String> = {'code', 'doce', 'ecod', 'framer', 'frame'} -->
+	<script>
+		function removeAnagrams(arr) {
+			let outArr = [], found = [];
+			for (let i = 0; i < arr.length; i++) {
+				let word = arr[i].split("").sort().join("");
+				if (!found.includes(word)) {
+					outArr.push(arr[i]);
+					found.push(word);
+				}
+			}
+			return outArr
+		}
+		let arr = ["code", "doce", "ecod", "framer", "frame"];
+		console.log(removeAnagrams(arr)); // ['code', 'framer', 'frame']
+
+
+		function removeAnagrams2(arr) {
+			let outArr = [], found = [];
+			arr.map((item, index, array) => {
+				let word = item.split("").sort().join("")
+				if (!found.includes(word)) {
+					outArr.push(item);
+					found.push(word);
+				}
+			})
+			return outArr
+		}
+		let arr2 = ["code", "doce", "ecod", "framer", "frame"];
+		console.log(removeAnagrams2(arr2)); // ['code', 'framer', 'frame']
+
+		function removeAnagrams3(arr) {
+			let outArr = [];
+			const addItem = (found, word, index) => {
+				outArr.push(arr[index])
+				return [...found, word]
+			}
+			arr.reduce((found, item, index) => {
+				let word = item.split("").sort().join("")
+				return found.includes(word) ? found : addItem(found, word, index)
+			}, [])
+			return outArr
+		}
+		let arr3 = ["code", "doce", "ecod", "framer", "frame"];
+		console.log(removeAnagrams3(arr3)); // ['code', 'framer', 'frame']
+
+	</script>
+</body>
+
+</html>
